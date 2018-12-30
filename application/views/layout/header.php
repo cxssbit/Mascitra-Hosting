@@ -227,7 +227,7 @@
             </ul>
             <!-- Off-Canvas Menu Links End -->
 
-            <a href="<?=base_url('Tampilan_c/p_masuk')?>" class="btn btn-default login-button"><i class="fa fa-user"></i> Login</a>
+            <a href="<?=base_url('login')?>" class="btn btn-default login-button"><i class="fa fa-user"></i> Login</a>
         </div>
         
         <div class="off-canvas-menu-overlay"></div>

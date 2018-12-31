@@ -16,7 +16,7 @@
                                         <p>Ada ratusan pengguna dalam 1 server. Ini seperti berbagi apartemen dengan teman-teman Anda. 
 										Jika seseorang kedatangan banyak tamu, maka tamu Anda perlu menunggu karena tidak ada lagi kamar yang tersedia.</p>
                                         
-                                        <a href="#" class="btn btn-lg btn-custom">Selengkapnya</a>
+                                        <a href="<?=base_url('hosting/shared')?>" class="btn btn-lg btn-custom">Selengkapnya</a>
                                     </section>
                                     <!-- Banner Item Content End -->
                                 </div>
@@ -65,7 +65,7 @@
                                         <p>Ada ratusan pengguna pada puluhan server cloud hosting yang terhubung. Ini seperti memiliki apartemen sendiri di hotel berbintang lima. 
 										Anda dapat memiliki kamar sebanyak yang Anda inginkan. Jika sebuah kamar rusak, Anda dapat pindah ke kamar lain atau bahkan ke gedung lain.</p>
                                         
-                                        <a href="#" class="btn btn-lg btn-custom">Selengkapnya</a>
+                                        <a href="<?=base_url('hosting/vps')?>" class="btn btn-lg btn-custom">Selengkapnya</a>
                                     </section>
                                     <!-- Banner Item Content End -->
                                 </div>
@@ -125,7 +125,7 @@
                                         
                                         <p>Cek Domain yang Anda Inginkan Sekarang dan Mulai Kesuksesan Bisnis Anda</p>
                                         
-                                        <a href="#" class="btn btn-lg btn-custom">Selengkapnya</a>
+                                        <a href="<?=base_url('domain')?>" class="btn btn-lg btn-custom">Selengkapnya</a>
                                     </section>
                                     <!-- Banner Item Content End -->
                                 </div>

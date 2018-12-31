@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css">
     <link rel="stylesheet" href="<?=base_url('assets/admin/css/cs-skin-elastic.css')?>">
     <link rel="stylesheet" href="<?=base_url('assets/admin/css/style.css')?>">
+    <link rel="stylesheet" href="<?=base_url('assets/admin/css/lib/datatable/dataTables.bootstrap.min.css')?>">
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
     <link href="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/jqvmap.min.css" rel="stylesheet">
@@ -68,12 +69,12 @@
         <nav class="navbar navbar-expand-sm navbar-default">
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active">
+                    <li class="<?php if($this->router->fetch_class()=='dashboard'){echo'active';}?>">
                         <a href="<?=base_url('dashboard')?>"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
                     </li>
 
-                    <li>
-                        <a href="<?=base_url()?>"><i class="menu-icon fa fa-user"></i>User </a>
+                    <li class="<?php if($this->router->fetch_class()=='user'){echo'active';}?>">
+                        <a href="<?=base_url('user')?>"><i class="menu-icon fa fa-user"></i>User </a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->

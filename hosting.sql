@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Dec 31, 2018 at 05:11 AM
--- Server version: 10.1.35-MariaDB
--- PHP Version: 7.2.9
+-- Host: 127.0.0.1
+-- Generation Time: 31 Des 2018 pada 10.08
+-- Versi Server: 10.1.30-MariaDB
+-- PHP Version: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,32 +25,43 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Struktur dari tabel `article`
 --
 
-CREATE TABLE `user` (
-  `email` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL,
-  `status` varchar(10) NOT NULL
+CREATE TABLE `article` (
+  `id` int(11) NOT NULL,
+  `judul` text NOT NULL,
+  `isi` text NOT NULL,
+  `kat` varchar(100) NOT NULL,
+  `tanggal` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `user`
+-- Dumping data untuk tabel `article`
 --
 
-INSERT INTO `user` (`email`, `password`, `status`) VALUES
-('a@a.com', '202cb962ac59075b964b07152d234b70', 'admin'),
-('admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 'admin');
+INSERT INTO `article` (`id`, `judul`, `isi`, `kat`, `tanggal`) VALUES
+(2, 'makan sayur kol', 'lorem ipsum', '', '2018-12-31 09:47:36');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `user`
+-- Indexes for table `article`
 --
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`email`);
+ALTER TABLE `article`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `article`
+--
+ALTER TABLE `article`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

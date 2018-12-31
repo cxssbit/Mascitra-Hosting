@@ -142,29 +142,23 @@
                         <li class="<?php if($this->router->fetch_class()=='pages'){echo'active';}?>">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="<?=base_url('Tampilan_c/about')?>">About</a></li>
-                                <li><a href="<?=base_url('Tampilan_c/service')?>">Service Details</a></li>
-                                <li><a href="<?=base_url('Tampilan_c/gallery')?>">Gallery</a></li>
-                                <li><a href="<?=base_url('Tampilan_c/faq')?>">FAQ</a></li>
-                                <li><a href="<?=base_url('Tampilan_c/datacenter')?>">Datacenter</a></li>
-                                <li><a href="<?=base_url('Tampilan_c/testimonial')?>">Testimonial</a></li>
-                                <li><a href="<?=base_url('Tampilan_c/p_masuk')?>">Login</a></li>
-                                <li><a href="<?=base_url('Tampilan_c/affiliate')?>">Affiliate</a></li>
-                                <li><a href="<?=base_url('Tampilan_c/nomor')?>">404</a></li>
+                                <li><a href="<?=base_url('pages/about')?>">About</a></li>
+                                <li><a href="<?=base_url('pages/service')?>">Service Details</a></li>
+                                <li><a href="<?=base_url('pages/gallery')?>">Gallery</a></li>
+                                <li><a href="<?=base_url('pages/faq')?>">FAQ</a></li>
+                                <li><a href="<?=base_url('pages/datacenter')?>">Datacenter</a></li>
+                                <li><a href="<?=base_url('pages/testimonial')?>">Testimonial</a></li>
+                                <li><a href="<?=base_url('pages/p_masuk')?>">Login</a></li>
+                                <li><a href="<?=base_url('pages/affiliate')?>">Affiliate</a></li>
                             </ul>
                         </li>
 
                         <li class="<?php if($this->router->fetch_class()=='blog'){echo'active';}?>">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="<?=base_url('Tampilan_c/blog')?>">Blog</a></li>
-                                <li><a href="<?=base_url('Tampilan_c/blog_left')?>">Blog Details Left</a></li>
-                                <li><a href="<?=base_url('Tampilan_c/blog_right')?>">Blog Details Right</a></li>
-                            </ul>
+                            <a href="<?=base_url()?>blog">Blog</a>
                         </li>
 
                         <li class="<?php if($this->router->fetch_class()=='contact'){echo'active';}?>">
-                            <a href="<?=base_url('Tampilan_c/contact')?>">Contact</a>
+                            <a href="<?=base_url('contact')?>">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -189,42 +183,47 @@
             
             <!-- Off-Canvas Menu Links Start -->
             <ul class="nav nav-pills nav-stacked">
-                <li class="active"><a href="index.php"><i class="fa fa-fw fa-home"></i> Home</a></li>
-                <li>
+                <li class="<?php if($this->router->fetch_class()=='home'){echo'active';}?>">
+                    <a href="<?=base_url()?>"><i class="fa fa-fw fa-home"></i> Home</a>
+                </li>
+
+                <li class="<?php if($this->router->fetch_class()=='hosting'){echo'active';}?>">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-fw fa-server"></i> Hosting <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="<?=base_url('Tampilan_c/shared')?>"><i class="fa fa-fw fa-angle-right"></i> Shared Hosting</a></li>
-                        <li><a href="<?=base_url('Tampilan_c/reseller')?>"><i class="fa fa-fw fa-angle-right"></i> Reseller Hosting</a></li>
-                        <li><a href="<?=base_url('Tampilan_c/vps')?>"><i class="fa fa-fw fa-angle-right"></i> VPS Hosting</a></li>
-                        <li><a href="<?=base_url('Tampilan_c/dedicated')?>"><i class="fa fa-fw fa-angle-right"></i>Dedicated Hosting</a></li>
+                        <li><a href="<?=base_url('hosting/shared')?>"><i class="fa fa-fw fa-angle-right"></i> Shared Hosting</a></li>
+                        <li><a href="<?=base_url('hosting/reseller')?>"><i class="fa fa-fw fa-angle-right"></i> Reseller Hosting</a></li>
+                        <li><a href="<?=base_url('hosting/vps')?>"><i class="fa fa-fw fa-angle-right"></i> VPS Hosting</a></li>
+                        <li><a href="<?=base_url('hosting/dedicated')?>"><i class="fa fa-fw fa-angle-right"></i>Dedicated Hosting</a></li>
                     </ul>
                 </li>
-                <li><a href="<?=base_url('Tampilan_c/domain')?>"><i class="fa fa-fw fa-at"></i> Domain</a></li>
-                <li>
+
+                <li class="<?php if($this->router->fetch_class()=='domain'){echo'active';}?>">
+                    <a href="<?=base_url('domain')?>"><i class="fa fa-fw fa-at"></i> Domain</a>
+                </li>
+
+                <li class="<?php if($this->router->fetch_class()=='pages'){echo'active';}?>">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-copy"></i> Pages <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="<?=base_url('Tampilan_c/about')?>"><i class="fa fa-fw fa-angle-right"></i> About</a></li>
-                        <li><a href="<?=base_url('Tampilan_c/service')?>"><i class="fa fa-fw fa-angle-right"></i> Service Details</a></li>
-                        <li><a href="<?=base_url('Tampilan_c/gallery')?>"><i class="fa fa-fw fa-angle-right"></i> Gallery</a></li>
-                        <li><a href="<?=base_url('Tampilan_c/fag')?>"><i class="fa fa-fw fa-angle-right"></i> FAQ</a></li>
-                        <li><a href="<?=base_url('Tampilan_c/datacenter')?>"><i class="fa fa-fw fa-angle-right"></i> Datacenter</a></li>
-                        <li><a href="<?=base_url('Tampilan_c/testimonial')?>"><i class="fa fa-fw fa-angle-right"></i> Testimonial</a></li>
-                        <li><a href="<=base_url('Tampilan_c/p_masuk')?>"><i class="fa fa-fw fa-angle-right"></i> Login</a></li>
-                        <li><a href="<?=base_url('Tampilan_c/affiliate')?>"><i class="fa fa-fw fa-angle-right"></i> Affiliate</a></li>
-                        <li><a href="<?=base_url('Tampilan_c/nomor')?>"><i class="fa fa-fw fa-angle-right"></i> 404</a></li>
+                        <li><a href="<?=base_url('pages/about')?>"><i class="fa fa-fw fa-angle-right"></i> About</a></li>
+                        <li><a href="<?=base_url('pages/service')?>"><i class="fa fa-fw fa-angle-right"></i> Service Details</a></li>
+                        <li><a href="<?=base_url('pages/gallery')?>"><i class="fa fa-fw fa-angle-right"></i> Gallery</a></li>
+                        <li><a href="<?=base_url('pages/fag')?>"><i class="fa fa-fw fa-angle-right"></i> FAQ</a></li>
+                        <li><a href="<?=base_url('pages/datacenter')?>"><i class="fa fa-fw fa-angle-right"></i> Datacenter</a></li>
+                        <li><a href="<?=base_url('pages/testimonial')?>"><i class="fa fa-fw fa-angle-right"></i> Testimonial</a></li>
+                        <li><a href="<?=base_url('pages/p_masuk')?>"><i class="fa fa-fw fa-angle-right"></i> Login</a></li>
+                        <li><a href="<?=base_url('pages/affiliate')?>"><i class="fa fa-fw fa-angle-right"></i> Affiliate</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-newspaper-o"></i> Blog <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="<?=base_url('Tampilan_c/blog')?>"><i class="fa fa-fw fa-angle-right"></i> Blog</a></li>
-                        <li><a href="<?=base_url('Tampilan_c/blog_left')?>"><i class="fa fa-fw fa-angle-right"></i> Blog Details Left</a></li>
-                        <li><a href="<?=base_url('Tampilan_c/blog_right')?>"><i class="fa fa-fw fa-angle-right"></i> Blog Details Right</a></li>
-          </ul>
+
+                <li class="<?php if($this->router->fetch_class()=='blog'){echo'active';}?>">
+                    <a href="<?=base_url('blog')?>"><i class="fa fa-fw fa-newspaper-o"></i> Blog</a>
                 </li>
-                <li><a href="<?=base_url('Tampilan_c/contact')?>"><i class="fa fa-fw fa-envelope-o"></i> Contact</a></li>
+
+                <li class="<?php if($this->router->fetch_class()=='contact'){echo'active';}?>">
+                    <a href="<?=base_url('Tampilan_c/contact')?>"><i class="fa fa-fw fa-envelope-o"></i> Contact</a>
+                </li>
             </ul>
             <!-- Off-Canvas Menu Links End -->
 

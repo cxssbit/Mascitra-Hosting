@@ -72,8 +72,9 @@
                     <li class="<?php if($this->router->fetch_class()=='dashboard'){echo'active';}?>">
                         <a href="<?=base_url('dashboard')?>"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
                     </li>
-                     <li>
-                        <a href="<?=base_url('article')?>"><i class="menu-icon fa fa-book"></i>article </a></li>
+                    <li class="<?php if($this->router->fetch_class()=='article'){echo'active';}?>">
+                        <a href="<?=base_url('article')?>"><i class="menu-icon fa fa-book"></i>Article </a>
+                    </li>
                     <li class="<?php if($this->router->fetch_class()=='user'){echo'active';}?>">
                         <a href="<?=base_url('user')?>"><i class="menu-icon fa fa-user"></i>User </a>
                     </li>

@@ -33,9 +33,6 @@ public function ubah($id){
 	if($this->input->post('submit')){
 		$this->ArtModel->edit($id);
 		redirect(base_url('article'));
-		
-		
-
 	}
 	$data['kategori']=$this->ArtModel->viewk();
 	$data['article']=$this->ArtModel->viewby($id);

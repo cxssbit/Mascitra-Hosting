@@ -73,7 +73,10 @@
                     </li>
 
                     <li>
-                        <a href="<?=base_url()?>"><i class="menu-icon fa fa-user"></i>User </a>
+                        <a href="<?=base_url('data_user')?>"><i class="menu-icon fa fa-user"></i>User </a>
+                    </li>
+                     <li>
+                        <a href="<?=base_url('article')?>"><i class="menu-icon fa fa-book"></i>article </a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->

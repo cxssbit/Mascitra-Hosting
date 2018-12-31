@@ -46,7 +46,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?php if(!empty($article)){foreach($article as $data){ ?>
+                                    <?php foreach($article as $data){ ?>
                                       <tr>
                                         <td><?=$data->id?></td>
                                         <td><?=$data->judul?></td>
@@ -56,8 +56,6 @@
                                           <a class='btn btn-danger btn-sm' href="<?=base_url('index.php/article/hapus/'.$data->id)?>">DELETE</a>
                                         </td>
                                     </tr>
-                                    <?php }}else{?>
-                                      <tr><td align='center' colspan='7'>Data Tidak Ada</td></tr>
                                     <?php }?>
                                     </tbody>
                                 </table>

@@ -54,4 +54,10 @@ class Pages extends CI_Controller {
 		$this->load->view('pages/404');
 		$this->load->view('layout/footer');
 	}
+
+	public function login(){
+		$this->load->view('layout/header');
+		$this->load->view('pages/login');
+		$this->load->view('layout/footer');
+	}
 }

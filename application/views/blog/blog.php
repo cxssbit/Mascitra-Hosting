@@ -31,21 +31,21 @@
                     <!-- Blog Item Start -->
                     <div class="blog-item">
                         <div class="blog-item-img">
-                            <a href="#">
-                                <img src="<?=base_url()?>assets/img/blog-img/img-1.jpg" alt="" class="img-responsive">
+                            <a href="<?=base_url('blog/page/'.$data->id)?>">
+                                <img src="<?=base_url()?>assets/img/blog-img/<?=$data->image?>" alt="" class="img-responsive">
                             </a>
                         </div>
                         
                         <div class="blog-item-content">
-                            <h2><a href="#"><?=$data->judul?></a></h2>
+                            <h2><a href="<?=base_url('blog/page/'.$data->id)?>"><?=$data->judul?></a></h2>
                             <div class="metadata">
                                 <i class="fa fa-calendar"></i> <a href="#"><?=$data->tanggal?></a>
                                 <span class="separator">|</span>
                                 <i class="fa fa-user"></i> <a href="#">Themelooks</a>
                             </div>
-                            <?=$data->isi?>
+                            <?=character_limiter(strip_tags($data->isi),300)?>
                             <br>
-                            <a href="#" class="btn btn-custom">Read More</a>
+                            <a href="<?=base_url('blog/page/'.$data->id)?>" class="btn btn-custom">Read More</a>
                         </div>
                     </div>
                     <!-- Blog Item End -->
@@ -84,20 +84,15 @@
                     <div class="widget recent-items">
                         <h2 class="widget-title">recent posts</h2>
                         <div class="footer-thumb m-t-15">
+                            <?php foreach ($recent as $data) {?>
                             <div class="row-holder">
                                 <div class="right-col">
-                                    <a class="footer-thumb-link" href="#">You shouldn't have to</a>
-                                    <p class="footer-thumb-text">You shouldn't have to take our word for it. You sdfd read what iYou shouldn't have to take our word for it. You sdfd read what i </p>
-                                    <span class="footer-thumb-date">Published ON: <span class="footer-thumb-text-italic">10 dec</span></span>
+                                    <a class="footer-thumb-link" href="<?=base_url('blog/page/'.$data->id)?>"><?=$data->judul?></a>
+                                    <p class="footer-thumb-text"><?=character_limiter(strip_tags($data->isi),100)?></p>
+                                    <span class="footer-thumb-date">Published ON: <?=$data->tanggal?></span>
                                 </div>
                             </div>
-                            <div class="row-holder">
-                                <div class="right-col">
-                                    <a class="footer-thumb-link" href="#">You shouldn't have to</a>
-                                    <p class="footer-thumb-text">You shouldn't have to take our word for it. You sdfd read what iYou shouldn't have to take our word for it. You sdfd read what i </p>
-                                    <span class="footer-thumb-date">Published ON: <span class="footer-thumb-text-italic">10 dec</span></span>
-                                </div>
-                            </div>
+                            <?php }?>
                         </div>
                     </div>
                     <!-- Blog Recent Posts Widget End -->

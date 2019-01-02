@@ -7,14 +7,21 @@
                                 <strong class="card-title">Tambah Article Baru</strong>
                             </div>
                             <div class="card-body">
-                              <form action="<?=base_url('article/tambah')?>" method="post">
+                              <form action="<?=base_url('article/tambah')?>" method="post" enctype="multipart/form-data">
                                 <div class="form-group">
                                   <label for="input-1">Judul</label>
                                   <input type="text" class="form-control" id="input-1" placeholder="Judul Article" name="judul">
                                 </div>
-                                  <div class="form-group">
+                                <label for="input-5">Image</label>
+                                <div class="input-group mb-3">
+                                  <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="input-5" name="image">
+                                    <label class="custom-file-label" for="input-5">Choose file</label>
+                                  </div>
+                                </div>
+                                <div class="form-group">
                                   <label for="input-2">Tanggal</label>
-                                  <input type="text" class="form-control" id="input-2" placeholder="dd/mm/yy" name="tanggal">
+                                  <input type="text" class="form-control" id="input-2" placeholder="yy/mm/dd hh:ii:ss" name="tanggal" value="<?=date("Y/m/d")?> <?=date("h:i:s")?>">
                                 </div>
                                 <div class="form-group">
                                   <label for="editor1">Isi</label>

@@ -26,5 +26,9 @@ class ArticleModel extends CI_Model{
 		$this->db->where('id',$id);
 		$this->db->update($this->table,$data);
 	}
+
+	public function getRecent(){
+		return $this->db->order_by("tanggal", "asc")->limit(2)->get($this->table)->result();
+	}
  
 }

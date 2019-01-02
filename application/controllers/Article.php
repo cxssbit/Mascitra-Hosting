@@ -2,11 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Article extends CI_Controller {
-	public function hapus($id){
-	
-    	$this->ArtModel->delete($id);
-    	redirect('article/index');
-}
+
 	public function __construct(){
 	parent::__construct();
 	$this->load->model('ArtModel');
@@ -21,7 +17,7 @@ class Article extends CI_Controller {
 }
 
 
-public function tambah(){
+	public function tambah(){
 	if($this->input->post('submit')){
 		$this->ArtModel->save();
 	redirect('article/index');
@@ -29,7 +25,7 @@ public function tambah(){
 	$data['kategori']=$this->ArtModel->viewk();
 	$this->load->view('tambah3',$data);
 }
-public function ubah($id){
+	public function ubah($id){
 	if($this->input->post('submit')){
 		$this->ArtModel->edit($id);
 		redirect(base_url('article'));
@@ -39,6 +35,10 @@ public function ubah($id){
 	$this->load->view('admin/layout/header');
 	$this->load->view('admin/article/ubah', $data);
 	$this->load->view('admin/layout/footer');
-}
+	}
 
+	public function hapus($id){
+    	$this->ArtModel->delete($id);
+    	redirect('article/index');
+	}
 }?>

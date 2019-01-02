@@ -78,6 +78,7 @@ class CI_Controller {
 		$this->load =& load_class('Loader', 'core');
 		$this->load->initialize();
 		log_message('info', 'Controller Class Initialized');
+		$this->form_validation->set_error_delimiters('<script>notify("', '")</script>');
 	}
 
 	// --------------------------------------------------------------------

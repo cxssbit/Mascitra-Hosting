@@ -181,5 +181,10 @@
 
     <!-- ==== Main JavaScript ==== -->
     <script src="<?=base_url()?>assets/js/main.js"></script>
+
+  <?php if (!empty($this->session->flashdata('info'))) {
+    echo "<script>notify('".$this->session->flashdata('info')."')</script>";
+  }?>
+  <?=validation_errors()?>
 </body>
 </html>

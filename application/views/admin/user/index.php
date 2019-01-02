@@ -40,8 +40,9 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>NAMA</th>
-                                            <th>EMAIL</th>
+                                            <th>Nama</th>
+                                            <th>E-Mail</th>
+                                            <th>Level</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -51,6 +52,13 @@
                                         <td><?=$data->id?></td>
                                         <td><?=$data->name?></td>
                                         <td><?=$data->email?></td>
+                                        <td>
+                                            <?php if ($data->level==1) {?>
+                                                Admin
+                                            <?php }else{?>
+                                                Member
+                                            <?php }?>
+                                        </td>
                                         <td>
                                           <a class='btn btn-warning btn-sm' href="<?=base_url('index.php/user/ubah/'.$data->id)?>">EDIT</a>
                                           <a class='btn btn-danger btn-sm' href="<?=base_url('index.php/user/hapus/'.$data->id)?>">DELETE</a>

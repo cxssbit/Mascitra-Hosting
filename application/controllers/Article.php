@@ -5,6 +5,7 @@ class Article extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
+		$this->AuthModel->auth(1);
 		$this->load->model('ArticleModel');
 		$this->load->model('KategoriModel');
 	}

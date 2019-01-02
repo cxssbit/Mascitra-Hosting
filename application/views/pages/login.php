@@ -24,7 +24,7 @@
     <div id="login">
         <div class="container">
             <div data-form-validation="true">
-                <form action="<?=base_url('dashboard')?>" method="post" id="loginForm">
+                <form action="<?=base_url('auth/login')?>" method="post" id="loginForm">
                     <div class="form-group">
                         <label for="loginEmail">Email address *</label>
                         <input type="email" name="email" class="form-control" id="loginEmail" placeholder="Email" required>

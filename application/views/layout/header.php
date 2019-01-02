@@ -148,7 +148,7 @@
                                 <li><a href="<?=base_url('pages/faq')?>">FAQ</a></li>
                                 <li><a href="<?=base_url('pages/datacenter')?>">Datacenter</a></li>
                                 <li><a href="<?=base_url('pages/testimonial')?>">Testimonial</a></li>
-                                <li><a href="<?=base_url('pages/login')?>">Login</a></li>
+                                <li><a href="<?=base_url('auth/login')?>">Login</a></li>
                                 <li><a href="<?=base_url('pages/affiliate')?>">Affiliate</a></li>
                             </ul>
                         </li>
@@ -212,7 +212,7 @@
                         <li><a href="<?=base_url('pages/fag')?>"><i class="fa fa-fw fa-angle-right"></i> FAQ</a></li>
                         <li><a href="<?=base_url('pages/datacenter')?>"><i class="fa fa-fw fa-angle-right"></i> Datacenter</a></li>
                         <li><a href="<?=base_url('pages/testimonial')?>"><i class="fa fa-fw fa-angle-right"></i> Testimonial</a></li>
-                        <li><a href="<?=base_url('pages/login')?>"><i class="fa fa-fw fa-angle-right"></i> Login</a></li>
+                        <li><a href="<?=base_url('auth/login')?>"><i class="fa fa-fw fa-angle-right"></i> Login</a></li>
                         <li><a href="<?=base_url('pages/affiliate')?>"><i class="fa fa-fw fa-angle-right"></i> Affiliate</a></li>
                     </ul>
                 </li>
@@ -227,7 +227,7 @@
             </ul>
             <!-- Off-Canvas Menu Links End -->
 
-            <a href="<?=base_url('pages/login')?>" class="btn btn-default login-button"><i class="fa fa-user"></i> Login</a>
+            <a href="<?=base_url('auth/login')?>" class="btn btn-default login-button"><i class="fa fa-user"></i> Login</a>
         </div>
         
         <div class="off-canvas-menu-overlay"></div>

@@ -12,13 +12,20 @@
                                   <label for="input-1">Nama</label>
                                   <input type="text" class="form-control" id="input-1" placeholder="nama" value="<?=$user->name?>" name="name">
                                 </div>
-                                  <div class="form-group">
+                                <div class="form-group">
+                                  <label for="input-4">Status</label>
+                                  <select class="form-control" id="input-4" name="level">
+                                    <option value="0">Member</option>
+                                    <option value="1">Admin</option>
+                                  </select>
+                                </div>
+                                <div class="form-group">
                                   <label for="input-2">email</label>
                                   <input type="text" class="form-control" id="input-2" placeholder="Email" value="<?=$user->email?>" name="email">
                                 </div>
                                 <div class="form-group">
                                   <label for="input-3">password</label>
-                                 <input type="text" class="form-control" id="input-3" placeholder="Password" value="<?=$user->password?>" name="password">
+                                  <input type="text" class="form-control" id="input-3" placeholder="Password" value="<?=$this->encryption->decrypt($user->password)?>" name="password">
                                 </div>
                                 <a href="<?=base_url('user')?>" class="btn btn-danger">
                                     <i class="fa fa-sign-out"></i>&nbsp; cancel

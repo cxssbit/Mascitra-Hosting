@@ -4,41 +4,53 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Article extends CI_Controller {
 
 	public function __construct(){
-	parent::__construct();
-	$this->load->model('ArtModel');
+		parent::__construct();
+		$this->load->model('ArticleModel');
+		$this->load->model('KategoriModel');
 	}
 
 	public function index(){
-	$data['article']=$this->ArtModel->view();
-
-	$this->load->view('admin/layout/header');
-	$this->load->view('admin/article/art', $data);
-	$this->load->view('admin/layout/footer');
-}
-
+		$data['article']=$this->ArticleModel->getAll();
+		$this->load->view('admin/layout/header');
+		$this->load->view('admin/article/art', $data);
+		$this->load->view('admin/layout/footer');
+	}
 
 	public function tambah(){
-	if($this->input->post('submit')){
-		$this->ArtModel->save();
-	redirect('article/index');
+		if($this->input->post('submit')){
+			$data = array(
+				'judul'  => $this->input->post('judul'),
+				'isi'    => $this->input->post('isi'),
+				'tanggal'=> $this->input->post('tanggal')
+			);
+			$this->ArticleModel->postAll($data);
+			redirect('article/index');
+		}
+		$data['kategori']=$this->KategoriModel->getAll();
+		$this->load->view('admin/layout/header');
+		$this->load->view('admin/article/tambah', $data);
+		$this->load->view('admin/layout/footer');
 	}
-	$data['kategori']=$this->ArtModel->viewk();
-	$this->load->view('tambah3',$data);
-}
+
 	public function ubah($id){
-	if($this->input->post('submit')){
-		$this->ArtModel->edit($id);
-		redirect(base_url('article'));
-	}
-	$data['kategori']=$this->ArtModel->viewk();
-	$data['article']=$this->ArtModel->viewby($id);
-	$this->load->view('admin/layout/header');
-	$this->load->view('admin/article/ubah', $data);
-	$this->load->view('admin/layout/footer');
+		if($this->input->post('submit')){
+			$data = array(
+				'judul'  => $this->input->post('judul'),
+				'isi'    => $this->input->post('isi'),
+				'tanggal'=> $this->input->post('tanggal')
+			);
+			$this->ArticleModel->update($id,$data);
+			redirect('article/index');
+		}
+		$data['kategori']=$this->ArticleModel->getAll();
+		$data['article'] =$this->ArticleModel->getSome($id);
+		$this->load->view('admin/layout/header');
+		$this->load->view('admin/article/ubah', $data);
+		$this->load->view('admin/layout/footer');
 	}
 
 	public function hapus($id){
-    	$this->ArtModel->delete($id);
+    	$this->ArticleModel->destroy($id);
     	redirect('article/index');
 	}
 }?>

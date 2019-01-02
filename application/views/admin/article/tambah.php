@@ -7,18 +7,18 @@
                                 <strong class="card-title">Tambah Article Baru</strong>
                             </div>
                             <div class="card-body">
-                              <form action="<?=base_url('article/ubah/')?><?=$article->id?>" method="post">
+                              <form action="<?=base_url('article/tambah')?>" method="post">
                                 <div class="form-group">
                                   <label for="input-1">Judul</label>
-                                  <input type="text" class="form-control" id="input-1" placeholder="Judul Article" value="<?=$article->judul?>" name="judul">
+                                  <input type="text" class="form-control" id="input-1" placeholder="Judul Article" name="judul">
                                 </div>
                                   <div class="form-group">
                                   <label for="input-2">Tanggal</label>
-                                  <input type="text" class="form-control" id="input-2" placeholder="dd/mm/yy" value="<?=$article->tanggal?>" name="tanggal">
+                                  <input type="text" class="form-control" id="input-2" placeholder="dd/mm/yy" name="tanggal">
                                 </div>
                                 <div class="form-group">
                                   <label for="input-3">Isi</label>
-                                  <textarea class="form-control" id="input-3" rows="3" name="isi"><?=$article->isi?></textarea>
+                                  <textarea class="form-control" id="input-3" rows="3" name="isi"></textarea>
                                 </div>
                                 <a href="<?=base_url('article')?>" class="btn btn-danger">
                                     <i class="fa fa-sign-out"></i>&nbsp; cancel
@@ -33,3 +33,4 @@
                 </div>
             </div><!-- .animated -->
         </div><!-- .content -->
+

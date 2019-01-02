@@ -18,7 +18,7 @@
                                 </div>
                                 <div class="form-group">
                                   <label for="input-3">Isi</label>
-                                  <textarea class="form-control" id="input-3" rows="3" name="isi"><?=$article->isi?></textarea>
+                                  <textarea class="form-control" id="editor1" rows="10" cols="80" name="isi"><?=$article->isi?></textarea>
                                 </div>
                                 <a href="<?=base_url('article')?>" class="btn btn-danger">
                                     <i class="fa fa-sign-out"></i>&nbsp; cancel

@@ -26,6 +26,8 @@
             <div class="row">
                 <!-- Blog Content Area Start -->
                 <div class="col-md-8 blog-page-content">
+
+                    <?php foreach($article as $data){?>
                     <!-- Blog Item Start -->
                     <div class="blog-item">
                         <div class="blog-item-img">
@@ -35,164 +37,19 @@
                         </div>
                         
                         <div class="blog-item-content">
-                            <h2><a href="#">Lorem ipsum dolor sit amet</a></h2>
+                            <h2><a href="#"><?=$data->judul?></a></h2>
                             <div class="metadata">
-                                <i class="fa fa-calendar"></i> <a href="#">16/03/2016</a>
+                                <i class="fa fa-calendar"></i> <a href="#"><?=$data->tanggal?></a>
                                 <span class="separator">|</span>
                                 <i class="fa fa-user"></i> <a href="#">Themelooks</a>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur odit, necessitatibus accusantium assumenda accusamus unde atque nisi sint fuga rem, ut aut reprehenderit ad tempora quisquam? A id fuga recusandae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur accusamus, eos repellat ea quam natus voluptatem quod velit et mollitia quaerat quas excepturi similique, porro illum consequatur. Aperiam, laudantium, repudiandae.</p>
+                            <?=$data->isi?>
+                            <br>
                             <a href="#" class="btn btn-custom">Read More</a>
                         </div>
                     </div>
                     <!-- Blog Item End -->
-                    
-                    <!-- Blog Item Start -->
-                    <div class="blog-item">
-                        <div class="blog-item-img">
-                            <a href="#">
-                                <img src="<?=base_url()?>assets/img/blog-img/img-2.jpg" alt="" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="blog-item-content">
-                            <h2><a href="#">Lorem ipsum dolor sit amet</a></h2>
-                            <div class="metadata">
-                                <i class="fa fa-calendar"></i> <a href="#">16/03/2016</a>
-                                <span class="separator">|</span>
-                                <i class="fa fa-user"></i> <a href="#">Themelooks</a>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur odit, necessitatibus accusantium assumenda accusamus unde atque nisi sint fuga rem, ut aut reprehenderit ad tempora quisquam? A id fuga recusandae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur accusamus, eos repellat ea quam natus voluptatem quod velit et mollitia quaerat quas excepturi similique, porro illum consequatur. Aperiam, laudantium, repudiandae.</p>
-                            <a href="#" class="btn btn-custom">Read More</a>
-                        </div>
-                    </div>
-                    <!-- Blog Item End -->
-                    
-                    <!-- Blog Item Start -->
-                    <div class="blog-item">
-                        <div class="blog-item-img">
-                            <a href="#">
-                                <img src="<?=base_url()?>assets/img/blog-img/img-3.jpg" alt="" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="blog-item-content">
-                            <h2><a href="#">Lorem ipsum dolor sit amet</a></h2>
-                            <div class="metadata">
-                                <i class="fa fa-calendar"></i> <a href="#">16/03/2016</a>
-                                <span class="separator">|</span>
-                                <i class="fa fa-user"></i> <a href="#">Themelooks</a>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur odit, necessitatibus accusantium assumenda accusamus unde atque nisi sint fuga rem, ut aut reprehenderit ad tempora quisquam? A id fuga recusandae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur accusamus, eos repellat ea quam natus voluptatem quod velit et mollitia quaerat quas excepturi similique, porro illum consequatur. Aperiam, laudantium, repudiandae.</p>
-                            <a href="#" class="btn btn-custom">Read More</a>
-                        </div>
-                    </div>
-                    <!-- Blog Item End -->
-                    
-                    <!-- Blog Item Start -->
-                    <div class="blog-item">
-                        <!-- Post Youtube Video Start -->
-                        <div class="blog-page-post-video embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Kr0tTbTbmVA?showinfo=0&controls=0&rel=0&wmode=transparent"></iframe>
-                        </div>
-                        <!-- Post Youtube Video End -->
-                        
-                        <div class="blog-item-content">
-                            <h2><a href="#">Lorem ipsum dolor sit amet</a></h2>
-                            <div class="metadata">
-                                <i class="fa fa-calendar"></i> <a href="#">16/03/2016</a>
-                                <span class="separator">|</span>
-                                <i class="fa fa-user"></i> <a href="#">Themelooks</a>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur odit, necessitatibus accusantium assumenda accusamus unde atque nisi sint fuga rem, ut aut reprehenderit ad tempora quisquam? A id fuga recusandae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur accusamus, eos repellat ea quam natus voluptatem quod velit et mollitia quaerat quas excepturi similique, porro illum consequatur. Aperiam, laudantium, repudiandae.</p>
-                            <a href="#" class="btn btn-custom">Read More</a>
-                        </div>
-                    </div>
-                    <!-- Blog Item End -->
-                    
-                    <!-- Blog Item Start -->
-                    <div class="blog-item">
-                        <!-- Post Vimeo Video Start -->
-                        <div class="blog-page-post-video embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/154190504?byline=0"></iframe>
-                        </div>
-                        <!-- Post Vimeo Video End -->
-                        
-                        <div class="blog-item-content">
-                            <h2><a href="#">Lorem ipsum dolor sit amet</a></h2>
-                            <div class="metadata">
-                                <i class="fa fa-calendar"></i> <a href="#">16/03/2016</a>
-                                <span class="separator">|</span>
-                                <i class="fa fa-user"></i> <a href="#">Themelooks</a>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur odit, necessitatibus accusantium assumenda accusamus unde atque nisi sint fuga rem, ut aut reprehenderit ad tempora quisquam? A id fuga recusandae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur accusamus, eos repellat ea quam natus voluptatem quod velit et mollitia quaerat quas excepturi similique, porro illum consequatur. Aperiam, laudantium, repudiandae.</p>
-                            <a href="#" class="btn btn-custom">Read More</a>
-                        </div>
-                    </div>
-                    <!-- Blog Item End -->
-                    
-                    <!-- Blog Item Start -->
-                    <div class="blog-item">
-                        <!-- Post Local Video Start -->
-                        <div class="blog-page-post-video local embed-responsive embed-responsive-16by9">
-                            <video controls="">
-                                <source src="media/video.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <!-- Post Local Video End -->
-                        
-                        <div class="blog-item-content">
-                            <h2><a href="#">Lorem ipsum dolor sit amet</a></h2>
-                            <div class="metadata">
-                                <i class="fa fa-calendar"></i> <a href="#">16/03/2016</a>
-                                <span class="separator">|</span>
-                                <i class="fa fa-user"></i> <a href="#">Themelooks</a>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur odit, necessitatibus accusantium assumenda accusamus unde atque nisi sint fuga rem, ut aut reprehenderit ad tempora quisquam? A id fuga recusandae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur accusamus, eos repellat ea quam natus voluptatem quod velit et mollitia quaerat quas excepturi similique, porro illum consequatur. Aperiam, laudantium, repudiandae.</p>
-                            <a href="#" class="btn btn-custom">Read More</a>
-                        </div>
-                    </div>
-                    <!-- Blog Item End -->
-                    
-                    <!-- Blog Item Start -->
-                    <div class="blog-item">
-                        <!-- Post Soundcloud Audio Start -->
-                        <div class="blog-page-post-video embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="https://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/34019569&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
-                        </div>
-                        <!-- Post Soundcloud Audio End -->
-                        
-                        <div class="blog-item-content">
-                            <h2><a href="#">Lorem ipsum dolor sit amet</a></h2>
-                            <div class="metadata">
-                                <i class="fa fa-calendar"></i> <a href="#">16/03/2016</a>
-                                <span class="separator">|</span>
-                                <i class="fa fa-user"></i> <a href="#">Themelooks</a>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur odit, necessitatibus accusantium assumenda accusamus unde atque nisi sint fuga rem, ut aut reprehenderit ad tempora quisquam? A id fuga recusandae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur accusamus, eos repellat ea quam natus voluptatem quod velit et mollitia quaerat quas excepturi similique, porro illum consequatur. Aperiam, laudantium, repudiandae.</p>
-                            <a href="#" class="btn btn-custom">Read More</a>
-                        </div>
-                    </div>
-                    <!-- Blog Item End -->
-                    
-                    <!-- Blog Item Start -->
-                    <div class="blog-item">
-                        <!-- Post Local Audio Start -->
-                        <div class="blog-page-post-audio">
-                            <audio src="media/audio.mp3" controls="">Your browser does not support the <code>audio</code> element.</audio>
-                        </div>
-                        <!-- Post Local Audio End -->
-                        
-                        <div class="blog-item-content">
-                            <h2><a href="#">Lorem ipsum dolor sit amet</a></h2>
-                            <div class="metadata">
-                                <i class="fa fa-calendar"></i> <a href="#">16/03/2016</a>
-                                <span class="separator">|</span>
-                                <i class="fa fa-user"></i> <a href="#">Themelooks</a>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur odit, necessitatibus accusantium assumenda accusamus unde atque nisi sint fuga rem, ut aut reprehenderit ad tempora quisquam? A id fuga recusandae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur accusamus, eos repellat ea quam natus voluptatem quod velit et mollitia quaerat quas excepturi similique, porro illum consequatur. Aperiam, laudantium, repudiandae.</p>
-                            <a href="#" class="btn btn-custom">Read More</a>
-                        </div>
-                    </div>
-                    <!-- Blog Item End -->
+                    <?php } ?>
 
                     <!-- Pagination Start -->
                     <ul class="pagination">

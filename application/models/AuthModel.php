@@ -15,9 +15,11 @@ class AuthModel extends CI_Model{
 		$auth = $this->db->get($this->table)->row();
 		$data_session = array(
 			'email' => $email,
-			'name'     => $auth->name
+			'name'     => $auth->name,
+			'login' => true
 		);
 		$this->session->set_userdata($data_session);
+		$_SESSION['login'] = true;
 
 		if ($auth->level==0) {
 			redirect('dashboard');

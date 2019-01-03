@@ -101,11 +101,9 @@
                     <div class="widget categories">
                         <h3 class="widget-title">categories</h3>
                         <ul>
-                            <li><a href="#">Web Design</a></li>
-                            <li><a href="#">UX Design</a></li>
-                            <li><a href="#">UI Design</a></li>
-                            <li><a href="#">UI Design</a></li>
-                            <li><a href="#">Flat Design</a></li>
+                            <?php foreach($kategori as $data){?>
+                            <li><a href="#"><?=$data->kategori?></a></li>
+                            <?php }?>
                         </ul>
                     </div>
                     <!-- Blog Categories Widget End -->

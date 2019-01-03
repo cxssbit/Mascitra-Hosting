@@ -9,7 +9,7 @@
 </script>
 
     <!-- Page Title Area Start -->
-    <div id="pageTitle" class="bg--overlay" data-bg-img="<?=base_url()?>assets/img/page-header-img/bg.jpg">
+    <div id="pageTitle" class="bg--overlay" data-bg-img="<?=base_url()?>assets/img/blog-img/<?=$article->image?>">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -50,7 +50,7 @@
                             <?=$article->isi?>
                         </div>
 
-                        <p><span class="post-category-text">CATEGORY:</span><a href="#" class="category-link">themelooks</a></p>
+                        <p><span class="post-category-text">CATEGORY:</span><a href="#" class="category-link"><?=$article->kategori?></a></p>
 
                         <div class="tags">
                             <ul>
@@ -84,7 +84,7 @@
                             </div>
                         </div>
                         <div class="mx-auto">
-                            <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="100%" data-numposts="5"></div>
+                            <div class="fb-comments" data-href="<?=(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"?>" data-width="100%" data-numposts="5"></div>
                         </div>
                     </div>
                 </div>
@@ -125,11 +125,9 @@
                     <div class="widget categories">
                         <h3 class="widget-title">categories</h3>
                         <ul>
-                            <li><a href="#">Web Design</a></li>
-                            <li><a href="#">UX Design</a></li>
-                            <li><a href="#">UI Design</a></li>
-                            <li><a href="#">UI Design</a></li>
-                            <li><a href="#">Flat Design</a></li>
+                            <?php foreach($kategori as $data){?>
+                            <li><a href="#"><?=$data->kategori?></a></li>
+                            <?php }?>
                         </ul>
                     </div>
                     <!-- Blog Categories Widget End -->

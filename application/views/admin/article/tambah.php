@@ -1,23 +1,26 @@
        <div class="content">
             <div class="animated fadeIn">
+              <form action="<?=base_url('article/tambah')?>" method="post" enctype="multipart/form-data">
                 <div class="row">
-                    <div class="col-md-8 mx-auto">
+                  
+                    <div class="col-md-8">
                         <div class="card">
                             <div class="card-header">
                                 <strong class="card-title">Buat Artikel Baru</strong>
                             </div>
                             <div class="card-body">
-                              <form action="<?=base_url('article/tambah')?>" method="post" enctype="multipart/form-data">
                                 <div class="form-group">
                                   <label for="input-1">Judul</label>
                                   <input type="text" class="form-control" id="input-1" placeholder="Judul Article" name="judul">
                                 </div>
-                                <label for="input-5">Image</label>
-                                <div class="input-group mb-3">
-                                  <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="input-5" name="image">
-                                    <label class="custom-file-label" for="input-5">Pilih File</label>
-                                  </div>
+                                <div class="form-group">
+                                  <label for="input-7">Kategori</label>
+                                  <input type="text" class="form-control" id="input-7" placeholder="Kategori" name="kategori" list="kategori">
+                                  <datalist id="kategori">
+                                    <?php foreach($kategori as $data){?>
+                                    <option value="<?=$data->kategori?>">
+                                    <?php }?>
+                                  </datalist>
                                 </div>
                                 <div class="form-group">
                                   <label for="input-2">Tanggal</label>
@@ -33,11 +36,26 @@
                                 <button type="submit" class="btn btn-primary float-right" name="submit" value="submit">
                                     <i class="fa fa-save"></i>&nbsp; Simpan
                                 </button>
-                              </form>
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="<?=base_url()?>assets/img/blog-img/img-1.jpg" alt="Article Image">
+                            <div class="card-body">
+                                <label for="input-5">Article Image</label>
+                                <div class="input-group mb-3">
+                                  <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="input-5" name="image">
+                                    <label class="custom-file-label" for="input-5">Pilih Image</label>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  
                 </div>
+                </form>
             </div><!-- .animated -->
         </div><!-- .content -->
 

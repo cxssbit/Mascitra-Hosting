@@ -39,7 +39,6 @@
                                 <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
-                                            <th class="text-center">#</th>
                                             <th>Judul</th>
                                             <th>Kategori</th>
                                             <th>Tanggal</th>
@@ -49,9 +48,8 @@
                                     <tbody>
                                     <?php $no=0;foreach($article as $data){$no++;?>
                                       <tr>
-                                        <td class="text-center"><?=$no?></td>
                                         <td><?=$data->judul?></td>
-                                        <td><?=$data->id_kategori?></td>
+                                        <td><?=$data->kategori?></td>
                                         <td><?=$data->tanggal?></td>
                                         <td class="text-center">
                                           <div class="btn-group" role="group" aria-label="Basic example">

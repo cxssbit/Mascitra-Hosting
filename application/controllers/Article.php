@@ -28,8 +28,7 @@ class Article extends CI_Controller {
 
       	$this->load->library('upload', $config);
 
-      	if($this->upload->do_upload('image'))
-        {
+      	if($this->upload->do_upload('image')){
             $resize['image_library'] = 'gd2';
             $resize['source_image']  = $this->upload->data('full_path');
             $resize['maintain_ratio']= FALSE;
@@ -43,11 +42,16 @@ class Article extends CI_Controller {
 
 		if($this->input->post('submit')){
 			$data = array(
-				'judul'  => $this->input->post('judul'),
-				'isi'    => $this->input->post('isi'),
-				'image'  => $image,
-				'tanggal'=> $this->input->post('tanggal')
+				'judul'   => $this->input->post('judul'),
+				'kategori'=> $this->input->post('kategori'),
+				'isi'     => $this->input->post('isi'),
+				'image'   => $image,
+				'tanggal' => $this->input->post('tanggal')
 			);
+			$this->db->where('kategori',$this->input->post('kategori'));
+			if ($this->db->get('kategori')->num_rows()==0) {
+				$this->KategoriModel->postAll(['kategori'=> $this->input->post('kategori')]);
+			}
 			$this->ArticleModel->postAll($data);
 			redirect('article/index');
 		}

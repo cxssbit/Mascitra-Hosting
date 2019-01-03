@@ -13,8 +13,9 @@ class Blog extends CI_Controller {
 
 	public function index()
 	{
-		$data['article']=$this->ArticleModel->getAll();
-		$data['recent'] =$this->ArticleModel->getRecent();
+		$data['article'] =$this->ArticleModel->getAll();
+		$data['recent']  =$this->ArticleModel->getRecent();
+		$data['kategori']=$this->KategoriModel->getAll();
 		$this->load->view('layout/header');
 		$this->load->view('blog/blog',$data);
 		$this->load->view('layout/footer');
@@ -24,6 +25,7 @@ class Blog extends CI_Controller {
 	{
 		$data['article']=$this->ArticleModel->getSome($id);
 		$data['recent'] =$this->ArticleModel->getRecent();
+		$data['kategori']=$this->KategoriModel->getAll();
 		$this->load->view('layout/header');
 		$this->load->view('blog/page',$data);
 		$this->load->view('layout/footer');

@@ -111,7 +111,7 @@
                             <?php foreach ($recent as $data) {?>
                             <div class="row-holder">
                                 <div class="right-col">
-                                    <a class="footer-thumb-link" href="<?=base_url('blog/page/'.$data->id)?>"><?=$data->judul?></a>
+                                    <a class="footer-thumb-link" href="<?=base_url('blog/page/'.$data->id)?>"><?=character_limiter($data->judul,40)?></a>
                                     <p class="footer-thumb-text"><?=character_limiter(strip_tags($data->isi),100)?></p>
                                     <span class="footer-thumb-date">Published ON: <?=$data->tanggal?></span>
                                 </div>

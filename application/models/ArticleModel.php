@@ -10,7 +10,7 @@ class ArticleModel extends CI_Model{
 	}
 
 	public function getAll(){
-		return $this->db->get($this->table)->result();
+		return $this->db->order_by("tanggal", "desc")->get($this->table)->result();
 	}
 
 	public function postAll($data){
@@ -28,7 +28,7 @@ class ArticleModel extends CI_Model{
 	}
 
 	public function getRecent(){
-		return $this->db->order_by("tanggal", "asc")->limit(2)->get($this->table)->result();
+		return $this->db->order_by("tanggal", "desc")->limit(2)->get($this->table)->result();
 	}
  
 }

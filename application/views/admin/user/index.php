@@ -23,7 +23,7 @@
             </div>
         </div>
 
-        <div class="content">
+        <div class="content mb-5">
             <div class="animated fadeIn">
                 <div class="row">
 
@@ -39,17 +39,17 @@
                                 <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
+                                            <th class="text-center">#</th>
                                             <th>Nama</th>
                                             <th>E-Mail</th>
                                             <th>Level</th>
-                                            <th>Action</th>
+                                            <th class="text-center">Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?php foreach($user as $data){ ?>
+                                    <?php $no=0;foreach($user as $data){$no++;?>
                                       <tr>
-                                        <td><?=$data->id?></td>
+                                        <td class="text-center"><?=$no?></td>
                                         <td><?=$data->name?></td>
                                         <td><?=$data->email?></td>
                                         <td>
@@ -59,9 +59,12 @@
                                                 Member
                                             <?php }?>
                                         </td>
-                                        <td>
-                                          <a class='btn btn-warning btn-sm' href="<?=base_url('index.php/user/ubah/'.$data->id)?>">EDIT</a>
-                                          <a class='btn btn-danger btn-sm' href="<?=base_url('index.php/user/hapus/'.$data->id)?>">DELETE</a>
+                                        <td class="text-center">
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                              <a class='btn btn-primary btn-sm' href="<?=base_url('index.php/user/ubah/'.$data->id)?>">Ubah</a>
+                                              <a class='btn btn-primary btn-sm' href="<?=base_url('index.php/user/ubah/'.$data->id)?>">Lihat</a>
+                                              <a class='btn btn-danger btn-sm' href="<?=base_url('index.php/user/hapus/'.$data->id)?>">Hapus</a>
+                                            </div>
                                         </td>
                                     </tr>
                                     <?php }?>

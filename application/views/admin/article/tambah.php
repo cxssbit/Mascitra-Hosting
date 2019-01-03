@@ -4,7 +4,7 @@
                     <div class="col-md-8 mx-auto">
                         <div class="card">
                             <div class="card-header">
-                                <strong class="card-title">Tambah Article Baru</strong>
+                                <strong class="card-title">Buat Artikel Baru</strong>
                             </div>
                             <div class="card-body">
                               <form action="<?=base_url('article/tambah')?>" method="post" enctype="multipart/form-data">
@@ -16,7 +16,7 @@
                                 <div class="input-group mb-3">
                                   <div class="custom-file">
                                     <input type="file" class="custom-file-input" id="input-5" name="image">
-                                    <label class="custom-file-label" for="input-5">Choose file</label>
+                                    <label class="custom-file-label" for="input-5">Pilih File</label>
                                   </div>
                                 </div>
                                 <div class="form-group">
@@ -28,7 +28,7 @@
                                   <textarea class="form-control" id="editor1" rows="10" cols="80" name="isi"></textarea>
                                 </div>
                                 <a href="<?=base_url('article')?>" class="btn btn-danger">
-                                    <i class="fa fa-sign-out"></i>&nbsp; cancel
+                                    <i class="fa fa-sign-out"></i>&nbsp; Batal
                                 </a>
                                 <button type="submit" class="btn btn-primary float-right" name="submit" value="submit">
                                     <i class="fa fa-save"></i>&nbsp; Simpan

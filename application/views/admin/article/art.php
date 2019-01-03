@@ -23,39 +23,42 @@
             </div>
         </div>
 
-        <div class="content">
+        <div class="content mb-5">
             <div class="animated fadeIn">
                 <div class="row">
 
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <strong class="card-title">Daftar User</strong>
+                                <strong class="card-title">List Artikel</strong>
                                 <a href="<?=base_url('article/tambah')?>" class="btn btn-primary btn-outline-primary btn-sm float-right">
-                                    <i class="fa fa-plus"></i>&nbsp; Tambah User
+                                    <i class="fa fa-plus"></i>&nbsp; Buat Artikel
                                 </a>
                             </div>
                             <div class="card-body">
                                 <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Title</th>
-                                            <th>Categori</th>
-                                            <th>Date</th>
-                                            <th>Action</th>
+                                            <th class="text-center">#</th>
+                                            <th>Judul</th>
+                                            <th>Kategori</th>
+                                            <th>Tanggal</th>
+                                            <th class="text-center">Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?php foreach($article as $data){ ?>
+                                    <?php $no=0;foreach($article as $data){$no++;?>
                                       <tr>
-                                        <td><?=$data->id?></td>
+                                        <td class="text-center"><?=$no?></td>
                                         <td><?=$data->judul?></td>
                                         <td><?=$data->id_kategori?></td>
                                         <td><?=$data->tanggal?></td>
-                                        <td>
-                                          <a class='btn btn-warning btn-sm' href="<?=base_url('index.php/article/ubah/'.$data->id)?>">EDIT</a>
-                                          <a class='btn btn-danger btn-sm' href="<?=base_url('index.php/article/hapus/'.$data->id)?>">DELETE</a>
+                                        <td class="text-center">
+                                          <div class="btn-group" role="group" aria-label="Basic example">
+                                            <a class='btn btn-primary btn-sm' href="<?=base_url('article/ubah/'.$data->id)?>">Ubah</a>
+                                            <a class='btn btn-primary btn-sm' href="<?=base_url('blog/page/'.$data->id)?>">Lihat</a>
+                                            <a class='btn btn-danger btn-sm' href="<?=base_url('article/hapus/'.$data->id)?>">Hapus</a>
+                                          </div>
                                         </td>
                                     </tr>
                                     <?php }?>

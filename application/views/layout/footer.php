@@ -41,11 +41,11 @@
                     <!-- Footer Title End -->
                     
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Shared</a></li>
-                        <li><a href="#">VPS</a></li>
-                        <li><a href="#">Dedicated</a></li>
-                        <li><a href="#">Domain</a></li>
+                        <li><a href="<?=base_url('');?>">Home</a></li>
+                        <li><a href="<?=base_url('hosting/shared');?>">Shared</a></li>
+                        <li><a href="<?=base_url('hosting/vps');?>">VPS</a></li>
+                        <li><a href="<?=base_url('hosting/dedicated');?>">Dedicated</a></li>
+                        <li><a href="<?=base_url('domain/');?>">Domain</a></li>
                     </ul>
                 </div>
                 <!-- Footer Widget End -->
@@ -57,11 +57,11 @@
                     <!-- Footer Title End -->
                     
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Acceptable Usage Policy</a></li>
-                        <li><a href="#">Terms &amp; Conditions</a></li>
-                        <li><a href="#">DMCA Policy</a></li>
+                        <li><a href="<?=base_url('pages/about');?>">About Us</a></li>
+                        <li><a href="<?=base_url('pages/service');?>">Privacy Policy</a></li>
+                        <li><a href="<?=base_url('pages/gallery');?>">Acceptable Usage Policy</a></li>
+                        <li><a href="<?=base_url('pages/faq');?>">Terms &amp; Conditions</a></li>
+                        <li><a href="<?=base_url('domain/');?>">DMCA Policy</a></li>
                     </ul>
                 </div>
                 <!-- Footer Widget End -->
@@ -73,11 +73,11 @@
                     <!-- Footer Title End -->
                     
                     <ul>
-                        <li><a href="#">SSL Certificates</a></li>
-                        <li><a href="#">Dedicated IPs</a></li>
-                        <li><a href="#">Control Panel Licenses</a></li>
-                        <li><a href="#">WHMCS License</a></li>
-                        <li><a href="#">Migrations / Transfers</a></li>
+                        <li><a href="<?=base_url('domain/');?>">SSL Certificates</a></li>
+                        <li><a href="<?=base_url('domain/');?>">Dedicated IPs</a></li>
+                        <li><a href="<?=base_url('domain/');?>">Control Panel Licenses</a></li>
+                        <li><a href="<?=base_url('domain/');?>">WHMCS License</a></li>
+                        <li><a href="<?=base_url('domain/');?>">Migrations / Transfers</a></li>
                     </ul>
                 </div>
                 <!-- Footer Widget End -->
@@ -108,6 +108,7 @@
                             <li><a href="#"><i class="fa fa-youtube"></i></a></li>
                             <li><a href="#"><i class="fa fa-behance"></i></a></li>
                         </ul>
+                        
                     </div>
                     <!-- Footer Social Widget End -->
                 </div>

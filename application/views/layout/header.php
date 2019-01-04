@@ -90,8 +90,8 @@
                     
                     <!-- Primary Social Links Start -->
                     <ul class="primary-social-menu-links nav navbar-nav navbar-right">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/mascitra.com.it"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/mascitra"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                         <li><a href="#"><i class="fa fa-rss"></i></a></li>
                     </ul>

@@ -15,8 +15,8 @@ function notify(error) {
   icon: "tim-icons icon-bell-55",
   message: error
 }, {
-  type: "primary",
-  timer: 5000,
+  type: "danger",
+  timer: 2500,
   placement: {
     from: "top",
     align: "right"

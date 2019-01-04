@@ -7,6 +7,11 @@ class User extends CI_Controller {
 		$this->AuthModel->auth(1);
 		$this->load->library('encryption');
 		$this->load->model('UserModel');
+		$this->form_validation->set_rules('name',    'Nama',    'required|max_length[50]');
+		$this->form_validation->set_rules('email',   'E-Mail',  'required|max_length[100]|valid_email');
+		$this->form_validation->set_rules('level',   'Level',   'required|max_length[1]|numeric');
+		$this->form_validation->set_rules('password','Password','required|max_length[16]');
+		$this->form_validation->set_rules('confirm', 'Confirm', 'required|max_length[16]|matches[password]');
 	}
 
 	public function index(){
@@ -17,7 +22,7 @@ class User extends CI_Controller {
 	}
 
 	public function tambah(){
-		if($this->input->post('submit')){
+		if($this->form_validation->run()==true){
 			$data = array(
 				'name'    => $this->input->post('name'),
 				'email'   => $this->input->post('email'),
@@ -33,7 +38,7 @@ class User extends CI_Controller {
 	}
 
 	public function ubah($id){
-		if($this->input->post('submit')){
+		if($this->form_validation->run()==true){
 			$data = array(
 				'name'    => $this->input->post('name'),
 				'email'   => $this->input->post('email'),

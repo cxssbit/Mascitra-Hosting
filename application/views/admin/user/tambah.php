@@ -10,7 +10,7 @@
                               <form action="<?=base_url('user/tambah')?>" method="post">
                                 <div class="form-group">
                                   <label for="input-1">Nama</label>
-                                  <input type="text" class="form-control" id="input-1" placeholder="nama" name="name">
+                                  <input type="text" class="form-control" id="input-1" placeholder="Masukkan Nama" name="name">
                                 </div>
                                 <div class="form-group">
                                   <label for="input-4">Status</label>
@@ -21,11 +21,15 @@
                                 </div>
                                 <div class="form-group">
                                   <label for="input-2">E-mail</label>
-                                  <input type="text" class="form-control" id="input-2" placeholder="lorem@ipsum.com" name="email">
+                                  <input type="text" class="form-control" id="input-2" placeholder="Masukkan E-Mail" name="email">
                                 </div>
                                 <div class="form-group">
                                   <label for="input-3">Password</label>
-                                  <input type="text" class="form-control" id="input-3" placeholder="" name="password">
+                                  <input type="password" class="form-control" id="input-3" placeholder="Masukkan Password" name="password">
+                                </div>
+                                <div class="form-group">
+                                  <label for="input-4">Confirm Password</label>
+                                  <input type="password" class="form-control" id="input-4" placeholder="Confirm Password" name="confirm">
                                 </div>
                                 <a href="<?=base_url('user')?>" class="btn btn-danger">
                                     <i class="fa fa-sign-out"></i>&nbsp; Cancel

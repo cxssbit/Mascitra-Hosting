@@ -125,8 +125,9 @@
                     <div class="widget categories">
                         <h3 class="widget-title">categories</h3>
                         <ul>
+                            <li><a href="<?=base_url('blog')?>">Semua</a></li>
                             <?php foreach($kategori as $data){?>
-                            <li><a href="#"><?=$data->kategori?></a></li>
+                            <li><a href="<?=base_url('blog/kategori/'.$data->kategori)?>"><?=$data->kategori?></a></li>
                             <?php }?>
                         </ul>
                     </div>

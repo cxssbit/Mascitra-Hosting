@@ -41,13 +41,13 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card">
-                            <img class="card-img-top" src="<?=base_url()?>assets/img/blog-img/img-1.jpg" alt="Article Image">
+                            <img class="card-img-top" height="200" id="preview" src="<?=base_url()?>assets/img/blog-img/img-1.jpg" alt="Article Image">
                             <div class="card-body">
                                 <label for="input-5">Article Image</label>
                                 <div class="input-group mb-3">
                                   <div class="custom-file">
                                     <input type="file" class="custom-file-input" id="image" name="image">
-                                    <label class="custom-file-label" for="image">Pilih Image</label>
+                                    <label class="custom-file-label" for="image"><p id="awaw">Pilih Image</p></label>
                                   </div>
                                 </div>
                             </div>

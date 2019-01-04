@@ -13,6 +13,11 @@ class ArticleModel extends CI_Model{
 		return $this->db->order_by("tanggal", "desc")->get($this->table)->result();
 	}
 
+	public function getKategori($kategori){
+		$this->db->where('kategori',$kategori);
+		return $this->db->order_by("tanggal", "desc")->get($this->table)->result();
+	}
+
 	public function postAll($data){
 		$this->db->insert($this->table,$data);
 	}

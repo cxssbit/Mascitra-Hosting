@@ -55,7 +55,7 @@
                                           <div class="btn-group" role="group" aria-label="Basic example">
                                             <a class='btn btn-primary btn-sm' href="<?=base_url('article/ubah/'.$data->id)?>">Ubah</a>
                                             <a class='btn btn-primary btn-sm' href="<?=base_url('blog/page/'.$data->id)?>">Lihat</a>
-                                            <a class='btn btn-danger btn-sm' href="<?=base_url('article/hapus/'.$data->id)?>">Hapus</a>
+                                            <button class='btn btn-danger btn-sm' data-toggle="modal" data-target="#hapus-<?=$data->id?>">Hapus</button>
                                           </div>
                                         </td>
                                     </tr>
@@ -68,3 +68,27 @@
                 </div>
             </div><!-- .animated -->
         </div>
+
+<?php foreach($article as $data){?>
+  <div class="modal fade" id="hapus-<?=$data->id?>" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="smallmodalLabel">Konfirmasi</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <p>
+                    Data ini akan dihapus secara Permanent..
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                <a href="<?=base_url('index.php/article/hapus/'.$data->id)?>" class="btn btn-danger">Hapus</a>
+            </div>
+        </div>
+    </div>
+</div>
+<?php } ?>

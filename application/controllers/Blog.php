@@ -30,4 +30,14 @@ class Blog extends CI_Controller {
 		$this->load->view('blog/page',$data);
 		$this->load->view('layout/footer');
 	}
+
+	public function kategori($kategori)
+	{
+		$data['article'] =$this->ArticleModel->getKategori($kategori);
+		$data['recent']  =$this->ArticleModel->getRecent();
+		$data['kategori']=$this->KategoriModel->getAll();
+		$this->load->view('layout/header');
+		$this->load->view('blog/blog',$data);
+		$this->load->view('layout/footer');
+	}
 }

@@ -48,11 +48,16 @@
     <script src="<?=base_url('assets/admin/js/init/datatables-init.js')?>"></script>
 
     <script src="<?=base_url('assets/ckeditor/ckeditor.js')?>"></script>
-
+    <script src="<?=base_url('assets/js/bootstrap-notify.js')?>"></script>
     <script src="<?=base_url('assets/js/myjs.js')?>"></script>
 
     <script>
         CKEDITOR.replace( 'editor1' );
     </script>
+
+  <?=validation_errors()?>
+  <?php if (!empty($this->session->flashdata('info'))) {
+    echo "<script>notify('".$this->session->flashdata('info')."')</script>";
+  }?>
 </body>
 </html>

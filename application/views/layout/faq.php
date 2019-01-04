@@ -20,7 +20,8 @@
                         
                         <div id="sharedTabQ1" class="panel-collapse collapse in" role="tabpanel">
                             <div class="panel-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates illum aspernatur odio similique voluptatibus itaque magni dicta quasi nesciunt. Possimus animi in, voluptatem facere sint aut quibusdam expedita. Voluptates, laudantium.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt aliquam cumque praesentium iusto delectus rem officia quas quos tempore quaerat laudantium incidunt minus, quae veniam itaque expedita voluptatum perspiciatis adipisci!</p>
+                                <p>Dedicated hosting is a hosting configuration in which a server is devoted to a single organisation or for a single purpose, such as a website. This is in contrast to shared hosting, in which a server acts as a host to multiple clients. A dedicated hosting service is sometimes referred to as a dedicated server and can be set up in-house or externally as a service from within a data center. Let’s have a look at some of the benefits.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -36,7 +37,7 @@
                         
                         <div id="sharedTabQ2" class="panel-collapse collapse" role="tabpanel">
                             <div class="panel-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates illum aspernatur odio similique voluptatibus itaque magni dicta quasi nesciunt. Possimus animi in, voluptatem facere sint aut quibusdam expedita. Voluptates, laudantium.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt aliquam cumque praesentium iusto delectus rem officia quas quos tempore quaerat laudantium incidunt minus, quae veniam itaque expedita voluptatum perspiciatis adipisci!</p>
+                                <p>The most convenient way to transfer your website's files to your new web hosting account is via FTP. You should connect to your hosting account and download the files locally to your computer. Then you have to upload them to your new hosting account's main folder (usually public_html, www or httpdocs).</p>
                             </div>
                         </div>
                     </div>
@@ -52,7 +53,7 @@
                         
                         <div id="sharedTabQ3" class="panel-collapse collapse" role="tabpanel">
                             <div class="panel-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates illum aspernatur odio similique voluptatibus itaque magni dicta quasi nesciunt. Possimus animi in, voluptatem facere sint aut quibusdam expedita. Voluptates, laudantium.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt aliquam cumque praesentium iusto delectus rem officia quas quos tempore quaerat laudantium incidunt minus, quae veniam itaque expedita voluptatum perspiciatis adipisci!</p>
+                                <p>To start, login to your domain name registrar where you purchased your domain and locate your nameservers. Then, you’ll want to copy and paste the nameservers provided by your host into the box where your existing nameservers are located</p>
                             </div>
                         </div>
                     </div>
@@ -68,7 +69,7 @@
                         
                         <div id="sharedTabQ4" class="panel-collapse collapse" role="tabpanel">
                             <div class="panel-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates illum aspernatur odio similique voluptatibus itaque magni dicta quasi nesciunt. Possimus animi in, voluptatem facere sint aut quibusdam expedita. Voluptates, laudantium.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt aliquam cumque praesentium iusto delectus rem officia quas quos tempore quaerat laudantium incidunt minus, quae veniam itaque expedita voluptatum perspiciatis adipisci!</p>
+                                <p>Cloud hosting offers unlimited ability to handle high traffic or traffic spikes. Here’s how it works: A team of servers (called a cloud) work together to host a group of websites. This allows multiple computers to work together to handle high traffic levels or spikes for any particular website</p>
                             </div>
                         </div>
                     </div>
@@ -84,7 +85,7 @@
                         
                         <div id="sharedTabQ5" class="panel-collapse collapse" role="tabpanel">
                             <div class="panel-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates illum aspernatur odio similique voluptatibus itaque magni dicta quasi nesciunt. Possimus animi in, voluptatem facere sint aut quibusdam expedita. Voluptates, laudantium.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt aliquam cumque praesentium iusto delectus rem officia quas quos tempore quaerat laudantium incidunt minus, quae veniam itaque expedita voluptatum perspiciatis adipisci!</p>
+                                <p>Dipping your toes in the waters of the internet. Shared hosting is inexpensive, so it’s an easy way to try setting up and running your site without spending much money. If you decide you need your own server/pool later on, upgrading is easy</p>
                             </div>
                         </div>
                     </div>

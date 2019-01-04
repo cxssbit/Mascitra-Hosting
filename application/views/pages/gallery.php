@@ -62,7 +62,7 @@
                 <div class="gallery--item col-md-3 col-sm-6 col-xs-12" data-cat="web-dev web-design">
                     <div class="gallery--img">
                         <a href="<?=base_url()?>assets/img/gallery-img/gallery-item-03.jpg">
-                            <img src="<?=base_url()?>assets/<?=base_url()?>assets/img/gallery-img/gallery-item-03.jpg" alt="" />
+                            <img src="<?=base_url()?>assets/img/gallery-img/gallery-item-03.jpg" alt="" />
                         </a>
                     </div>
                 </div>

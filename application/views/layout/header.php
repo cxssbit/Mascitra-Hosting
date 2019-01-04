@@ -91,7 +91,7 @@
                     <!-- Primary Social Links Start -->
                     <ul class="primary-social-menu-links nav navbar-nav navbar-right">
                         <li><a href="https://www.facebook.com/mascitra.com.it"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="https://twitter.com/mascitra"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                         <li><a href="#"><i class="fa fa-rss"></i></a></li>
                     </ul>
@@ -209,7 +209,7 @@
                         <li><a href="<?=base_url('pages/about')?>"><i class="fa fa-fw fa-angle-right"></i> About</a></li>
                         <li><a href="<?=base_url('pages/service')?>"><i class="fa fa-fw fa-angle-right"></i> Service Details</a></li>
                         <li><a href="<?=base_url('pages/gallery')?>"><i class="fa fa-fw fa-angle-right"></i> Gallery</a></li>
-                        <li><a href="<?=base_url('pages/fag')?>"><i class="fa fa-fw fa-angle-right"></i> FAQ</a></li>
+                        <li><a href="<?=base_url('pages/faq')?>"><i class="fa fa-fw fa-angle-right"></i> FAQ</a></li>
                         <li><a href="<?=base_url('pages/datacenter')?>"><i class="fa fa-fw fa-angle-right"></i> Datacenter</a></li>
                         <li><a href="<?=base_url('pages/testimonial')?>"><i class="fa fa-fw fa-angle-right"></i> Testimonial</a></li>
                         <li><a href="<?=base_url('auth/login')?>"><i class="fa fa-fw fa-angle-right"></i> Login</a></li>
@@ -221,9 +221,11 @@
                     <a href="<?=base_url('blog')?>"><i class="fa fa-fw fa-newspaper-o"></i> Blog</a>
                 </li>
 
-                <li class="<?php if($this->router->fetch_class()=='contact'){echo'active';}?>">
-                    <a href="<?=base_url('Tampilan_c/contact')?>"><i class="fa fa-fw fa-envelope-o"></i> Contact</a>
+                
+               <li class="<?php if($this->router->fetch_class()=='contact'){echo'active';}?>">
+                    <a href="<?=base_url('contact')?>"><i class="fa fa-fw fa-envelope-o"></i> Contact</a>
                 </li>
+
             </ul>
             <!-- Off-Canvas Menu Links End -->
 

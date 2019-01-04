@@ -9,7 +9,13 @@ CKEDITOR.editorConfig = function( config ) {
 	// http://docs.ckeditor.com/#!/api/CKEDITOR.config
 
 	// The toolbar groups arrangement, optimized for two toolbar rows.
-	config.filebrowserBrowseUrl = 'http://localhost/host/assets/ckfinder/ckfinder.html';
+	$data = 'false';
+	config.filebrowserBrowseUrl = '../assets/kcfinder/browse.php?type=files',$data;
+config.filebrowserImageBrowseUrl = '../assets/kcfinder/browse.php?type=images';
+config.filebrowserFlashBrowseUrl = '../../assets/kcfinder/browse.php?type=flash';
+config.filebrowserUploadUrl = '../../assets/kcfinder/upload.php?type=files';
+config.filebrowserImageUploadUrl = '../../assets/kcfinder/upload.php?type=images';
+config.filebrowserFlashUploadUrl = '../../assets/kcfinder/upload.php?type=flash';
 	config.toolbarGroups = [
 		{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },
 		{ name: 'editing',     groups: [ 'find', 'selection', 'spellchecker' ] },

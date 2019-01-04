@@ -49,6 +49,8 @@
 
     <script src="<?=base_url('assets/ckeditor/ckeditor.js')?>"></script>
 
+    <script src="<?=base_url('assets/js/myjs.js')?>"></script>
+
     <script>
         CKEDITOR.replace( 'editor1' );
     </script>

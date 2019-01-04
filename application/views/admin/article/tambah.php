@@ -46,8 +46,8 @@
                                 <label for="input-5">Article Image</label>
                                 <div class="input-group mb-3">
                                   <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="input-5" name="image">
-                                    <label class="custom-file-label" for="input-5">Pilih Image</label>
+                                    <input type="file" class="custom-file-input" id="image" name="image">
+                                    <label class="custom-file-label" for="image">Pilih Image</label>
                                   </div>
                                 </div>
                             </div>

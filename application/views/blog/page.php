@@ -9,7 +9,7 @@
 </script>
 
     <!-- Page Title Area Start -->
-    <div id="pageTitle" class="bg--overlay" data-bg-img="<?=base_url()?>assets/img/blog-img/<?=$article->image?>">
+    <div id="pageTitle" class="bg--overlay" data-bg-img="<?=site_url()?>assets/img/blog-img/<?=$article->image?>">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -38,7 +38,7 @@
                 <div class="col-md-8 blog-page-content">
                     <div class="blog-item full-post">
                         <div class="blog-item-img">
-                            <img src="<?=base_url()?>assets/img/blog-img/<?=$article->image?>" alt="" class="img-responsive">
+                            <img src="<?=site_url()?>assets/img/blog-img/<?=$article->image?>" alt="" class="img-responsive">
                         </div>
                         <div class="blog-item-content">
                             <h2><?=$article->judul?></h2>
@@ -50,7 +50,7 @@
                             <?=$article->isi?>
                         </div>
 
-                        <p><span class="post-category-text">CATEGORY:</span><a href="#" class="category-link"><?=$article->kategori?></a></p>
+                        <p><span class="post-category-text">CATEGORY:</span><a href="<?=base_url('blog/kategori/'.$article->kategori)?>" class="category-link"><?=$article->kategori?></a></p>
 
                         <div class="tags">
                             <ul>
@@ -66,19 +66,14 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="post-author-metadata">
-                                    <img src="<?=base_url()?>assets/img/blog-img/author.jpg" alt="">
+                                    <img src="<?=site_url()?>assets/img/blog-img/author.jpg" alt="">
                                     <a href="#" class="post-author-name">Admin</a>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="post-social-links">
                                     <ul>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-feed"></i></a></li>
+                                        <?php $this->load->view('layout/social')?>
                                     </ul>
                                 </div>
                             </div>
@@ -111,7 +106,7 @@
                             <?php foreach ($recent as $data) {?>
                             <div class="row-holder">
                                 <div class="right-col">
-                                    <a class="footer-thumb-link" href="<?=base_url('blog/page/'.$data->id)?>"><?=character_limiter($data->judul,40)?></a>
+                                    <a class="footer-thumb-link" href="<?=site_url('blog/page/'.$data->url)?>"><?=character_limiter($data->judul,40)?></a>
                                     <p class="footer-thumb-text"><?=character_limiter(strip_tags($data->isi),100)?></p>
                                     <span class="footer-thumb-date">Published ON: <?=$data->tanggal?></span>
                                 </div>

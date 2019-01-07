@@ -1,5 +1,5 @@
     <!-- Page Title Area Start -->
-    <div id="pageTitle" class="bg--overlay" data-bg-img="<?=base_url()?>assets/img/page-header-img/bg.jpg">
+    <div id="pageTitle" class="bg--overlay" data-bg-img="<?=site_url()?>assets/img/page-header-img/bg.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -31,13 +31,13 @@
                     <!-- Blog Item Start -->
                     <div class="blog-item">
                         <div class="blog-item-img">
-                            <a href="<?=base_url('blog/page/'.$data->id)?>">
-                                <img src="<?=base_url()?>assets/img/blog-img/<?=$data->image?>" alt="" class="img-responsive">
+                            <a href="<?=site_url('blog/page/'.$data->url)?>">
+                                <img src="<?=site_url()?>assets/img/blog-img/<?=$data->image?>" alt="" class="img-responsive">
                             </a>
                         </div>
                         
                         <div class="blog-item-content">
-                            <h2><a href="<?=base_url('blog/page/'.$data->id)?>"><?=$data->judul?></a></h2>
+                            <h2><a href="<?=site_url('blog/page/'.$data->url)?>"><?=$data->judul?></a></h2>
                             <div class="metadata">
                                 <i class="fa fa-calendar"></i> <a href="#"><?=$data->tanggal?></a>
                                 <span class="separator">|</span>
@@ -45,22 +45,14 @@
                             </div>
                             <?=character_limiter(strip_tags($data->isi),300)?>
                             <br>
-                            <a href="<?=base_url('blog/page/'.$data->id)?>" class="btn btn-custom">Read More</a>
+                            <a href="<?=site_url('blog/page/'.$data->url)?>" class="btn btn-custom">Read More</a>
                         </div>
                     </div>
                     <!-- Blog Item End -->
                     <?php } ?>
 
                     <!-- Pagination Start -->
-                    <ul class="pagination">
-                        <li><a href="#">&laquo;</a></li>
-                        <li class="active"><span>1</span></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">&raquo;</a></li>
-                    </ul>
+                    <?=$this->pagination->create_links()?>
                     <!-- Pagination End -->
                 </div>
                 <!-- Blog Content Area End -->
@@ -87,7 +79,7 @@
                             <?php foreach ($recent as $data) {?>
                             <div class="row-holder">
                                 <div class="right-col">
-                                    <a class="footer-thumb-link" href="<?=base_url('blog/page/'.$data->id)?>"><?=character_limiter($data->judul,40)?></a>
+                                    <a class="footer-thumb-link" href="<?=site_url('blog/page/'.$data->url)?>"><?=character_limiter($data->judul,40)?></a>
                                     <p class="footer-thumb-text"><?=character_limiter(strip_tags($data->isi),100)?></p>
                                     <span class="footer-thumb-date">Published ON: <?=$data->tanggal?></span>
                                 </div>

@@ -10,7 +10,7 @@
                 
                 <!-- Contact Info Item Start -->
                 <div class="contact-info--item col-md-3 col-xs-6">
-                    <a href="#"><i class="fa fa-envelope-o"></i>info@mascitra.com</a>
+                    <a href="mailto:<?=$this->ContactModel->get('email')?>"><i class="fa fa-envelope-o"></i><?=$this->ContactModel->get('email')?></a>
                 </div>
                 <!-- Contact Info Item End -->
                 
@@ -22,7 +22,7 @@
                 
                 <!-- Contact Info Item Start -->
                 <div class="contact-info--item col-md-3 col-xs-6">
-                    <a href="#"><i class="fa fa-phone"></i>+62 331 4350050</a>
+                    <a href="<?=base_url('contact')?>"><i class="fa fa-phone" target="_top"></i><?=$this->ContactModel->get('phone')?></a>
                 </div>
                 <!-- Contact Info Item End -->
             </div>
@@ -100,15 +100,7 @@
                     <!-- Footer Social Widget Start -->
                     <div class="footer--social-widget">
                         <p>FOLLOW US ON:</p>
-                        <ul>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                        </ul>
-                        
+                        <?php $this->load->view('layout/social')?>
                     </div>
                     <!-- Footer Social Widget End -->
                 </div>
@@ -182,6 +174,10 @@
 
     <!-- ==== Main JavaScript ==== -->
     <script src="<?=base_url()?>assets/js/main.js"></script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6Z7C-3TtrFRMXfBu6R8F8XoxQDQn-fRM&callback=initMap">
+    </script>
 
   <?php if (!empty($this->session->flashdata('info'))) {
     echo "<script>notify('".$this->session->flashdata('info')."')</script>";

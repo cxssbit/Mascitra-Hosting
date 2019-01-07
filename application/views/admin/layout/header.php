@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css">
@@ -73,10 +73,16 @@
                         <a href="<?=base_url('dashboard')?>"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
                     </li>
                     <li class="<?php if($this->router->fetch_class()=='article'){echo'active';}?>">
-                        <a href="<?=base_url('article')?>"><i class="menu-icon fa fa-book"></i>Article </a>
+                        <a href="<?=base_url('article')?>"><i class="menu-icon fa fa-book"></i>Artikel </a>
                     </li>
                     <li class="<?php if($this->router->fetch_class()=='user'){echo'active';}?>">
                         <a href="<?=base_url('user')?>"><i class="menu-icon fa fa-user"></i>User </a>
+                    </li>
+                    <li class="<?php if($this->router->fetch_class()=='contact'){echo'active';}?>">
+                        <a href="<?=base_url('contact/manager')?>"><i class="menu-icon fas fa-address-book"></i></i>Kontak </a>
+                    </li>
+                    <li class="<?php if($this->router->fetch_class()=='message'){echo'active';}?>">
+                        <a href="<?=base_url('message')?>"><i class="menu-icon far fa-envelope"></i></i>Message </a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->

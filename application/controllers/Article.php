@@ -49,6 +49,7 @@ class Article extends CI_Controller {
 	        }
 			$data = array(
 				'judul'   => $this->input->post('judul'),
+				'url'     => strtolower(str_replace(' ','-',$this->input->post('judul'))),
 				'kategori'=> $this->input->post('kategori'),
 				'isi'     => $this->input->post('isi'),
 				'image'   => $image,
@@ -95,6 +96,7 @@ class Article extends CI_Controller {
 	        }
 			$data = array(
 				'judul'   => $this->input->post('judul'),
+				'url'     => strtolower(str_replace(' ','-',$this->input->post('judul'))),
 				'kategori'=> $this->input->post('kategori'),
 				'isi'     => $this->input->post('isi'),
 				'image'   => $image,

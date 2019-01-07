@@ -9,6 +9,11 @@ class ArticleModel extends CI_Model{
 		return $this->db->get($this->table)->row();
 	}
 
+	public function getUrl($url){
+		$this->db->where('url',$url);
+		return $this->db->get($this->table)->row();
+	}
+
 	public function getAll(){
 		return $this->db->order_by("tanggal", "desc")->get($this->table)->result();
 	}

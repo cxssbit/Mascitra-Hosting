@@ -31,38 +31,21 @@
                         
                         <!-- Contact Address Start -->
                         <address>
-                            <p><i class="fa fa-home"></i> Jl. Nusantara GF-7A, Kaliwates, Jember, Jawa Timur, Indonesia.</p>
-                            <p><i class="fa fa-envelope"></i> info@mascitra.com</p>
-                            <p><i class="fa fa-phone"></i> +62 331-4350050</p>
-                            <p><i class="fa fa-fax"></i> +62 331-4350327</p>
+                            <?=$this->ContactModel->get('address')?>
                         </address>
                         <!-- Contact Address Area End -->
                         
                         <!-- Contact Social Links Start -->
                         <div class="contact-social-links">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-feed"></i></a></li>
-                            </ul>
+                            <?php $this->load->view('layout/social')?>
                         </div>
+                        
                         <!-- Contact Social Links End -->
                     </div>
                     <!-- Contact Address Area End -->
                 </div>
                 <div class="col-sm-6 contact-form">
-                    <?php if (isset($this->session->sukses)): ?>
-                        <div class="alert alert-success">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">×</span>
-                            </button>
-                            <?=$this->session->sukses?>
-                        </div>
-                    <?php endif ?>
-                    <form action="<?=base_url()?>assets/Contact_c/simpan" method="post" >
+                    <form action="<?=base_url()?>message/send" method="post" >
                         <div class="contact-form-status"></div>
                         <div class="row">
                             <div class="col-md-6">
@@ -99,7 +82,7 @@
                         <div class="ca-icon"><i class="fa fa-envelope"></i></div>
                         <h4 class="ca-text">Email Support</h4>
                         <p class="sum">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae reprehenderit impedit aut facilis!</p>
-                        <a href="#" class="btn">Send Email</a>
+                        <a href="mailto:<?=$this->ContactModel->get('email')?>" target="_top" class="btn">Send Email</a>
                     </div>
                 </div>
                 <div class="col-sm-3">

@@ -23,41 +23,30 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
     <script src="<?=base_url('assets/admin/js/main.js')?>"></script>
 
-    <!--  Chart js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.bundle.min.js"></script>
-
-    <!--Chartist Chart-->
-    <script src="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartist-plugin-legend@0.6.2/chartist-plugin-legend.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/jquery.flot@0.8.3/jquery.flot.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flot-pie@1.0.0/src/jquery.flot.pie.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flot-spline@0.0.1/js/jquery.flot.spline.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/simpleweather@3.1.0/jquery.simpleWeather.min.js"></script>
-    <script src="<?=base_url('assets/admin/js/init/weather-init.js')?>"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.js"></script>
-    <script src="<?=base_url('assets/admin/js/init/fullcalendar-init.js')?>"></script>
-
-
     <script src="<?=base_url('assets/admin/js/lib/data-table/datatables.min.js')?>"></script>
     <script src="<?=base_url('assets/admin/js/lib/data-table/dataTables.bootstrap.min.js')?>"></script>
- 
     <script src="<?=base_url('assets/admin/js/init/datatables-init.js')?>"></script>
+    <script src="<?=base_url('assets/js/standalone/selectize.js')?>"></script>
 
     <script src="<?=base_url('assets/ckeditor/ckeditor.js')?>"></script>
     <script src="<?=base_url('assets/js/bootstrap-notify.js')?>"></script>
+
     <script src="<?=base_url('assets/js/myjs.js')?>"></script>
 
     <script>
         CKEDITOR.replace( 'editor1' );
     </script>
-
-  <?=validation_errors()?>
-  <?php if (!empty($this->session->flashdata('info'))) {
-    echo "<script>notify('".$this->session->flashdata('info')."')</script>";
-  }?>
+    <?php $this->form_validation->set_error_delimiters('<script>notify("', '")</script>');?>
+    <?=validation_errors()?>
+    <?php if (!empty($this->session->flashdata('info'))) {
+      echo "<script>notify('".$this->session->flashdata('info')."')</script>";
+    }?>
+<script type="text/javascript">
+$('#multiple').selectize({
+    persist: false,
+    createOnBlur: true,
+    create: true
+});
+</script>
 </body>
 </html>

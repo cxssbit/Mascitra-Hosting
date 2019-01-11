@@ -25,6 +25,11 @@
         <div class="container">
             <div data-form-validation="true">
                 <form action="<?=base_url('auth/login')?>" method="post" id="loginForm">
+                    <div style="color: red">
+                        <?php if (!empty($this->session->flashdata('info'))){
+                            echo $this->session->flashdata('info').'<br><br>';   
+                        }?>
+                    </div>
                     <div class="form-group">
                         <label for="loginEmail">Email address *</label>
                         <input type="email" name="email" class="form-control" id="loginEmail" placeholder="Email" required>

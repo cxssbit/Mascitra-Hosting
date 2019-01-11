@@ -45,25 +45,25 @@
                     <!-- Contact Address Area End -->
                 </div>
                 <div class="col-sm-6 contact-form">
-                    <form action="<?=base_url()?>message/send" method="post" >
+                    <form action="<?=base_url()?>contact" method="post" >
                         <div class="contact-form-status"></div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" name="name" class="form-control" placeholder="Name">
+                                    <input type="text" name="name" class="form-control" placeholder="<?=form_error('name')?>">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="email" name="email" class="form-control" placeholder="Email">
+                                    <input type="email" name="email" class="form-control" placeholder="<?=form_error('email')?>">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="text" name="subject" class="form-control" placeholder="Subject">
+                            <input type="text" name="subject" class="form-control" placeholder="<?=form_error('subject')?>">
                         </div>
                         <div class="form-group">
-                            <textarea name="message" class="form-control" cols="30" rows="10" placeholder="Message"></textarea>
+                            <textarea name="message" class="form-control" cols="30" rows="10" placeholder="<?=form_error('message')?>"></textarea>
                         </div>
                         <button type="submit" class="btn btn-info btn-lg">SEND</button>
                     </form>

@@ -21,11 +21,16 @@
                                     <tbody>
                                     <?php $no=0;foreach($message as $data){$no++;$date=strtotime($data->timestamp);?>
                                       <tr>
-                                        <td class="text-center"><?=$no?></td>
-                                        <td><?=$data->name?></td>
-                                        <td><?=$data->subject?> - <?=character_limiter($data->message,50)?></td>
-                                        <td><small><?=date('Y-m-d',$date)?></small></td>
-                                        <td class="text-center">
+                                        <td class="text-center align-middle"><?=$no?></td>
+                                        <td class="align-middle"><?=$data->name?></td>
+                                        <td class="align-middle">
+                                            <small>
+                                                <?php if($data->status=='unread'){?><span class="badge badge-pill badge-primary">New</span><?php }?>
+                                                <?=$data->subject?> - <?=character_limiter($data->message,50)?>
+                                            </small>
+                                        </td>
+                                        <td class="align-middle"><small><?=date('Y-m-d',$date)?></small></td>
+                                        <td class="text-center align-middle">
                                             <div class="btn-group" role="group" aria-label="Basic example">
                                               <a class='btn btn-primary btn-sm' href="<?=base_url('message/view/'.$data->id)?>">Lihat</a>
                                               <a class='btn btn-primary btn-sm' href="<?=base_url('index.php/user/ubah/'.$data->id)?>">Balas</a>

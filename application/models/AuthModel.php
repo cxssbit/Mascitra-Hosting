@@ -11,10 +11,10 @@ class AuthModel extends CI_Model{
 	}
 
 	public function login($email){
-		$this->db->where('email',$username);
+		$this->db->where('email',$email);
 		$auth = $this->db->get($this->table)->row();
 		$data_session = array(
-			'email' => $email,
+			'email'    => $email,
 			'name'     => $auth->name
 		);
 		$this->session->set_userdata($data_session);

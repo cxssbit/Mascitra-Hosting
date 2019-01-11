@@ -1,8 +1,8 @@
 <?php 
  
-class MessageModel extends CI_Model{
+class TeamModel extends CI_Model{
 
-	private $table='message';
+	private $table='team';
 
 	public function getSome($id){
 		$this->db->where('id',$id);
@@ -10,12 +10,7 @@ class MessageModel extends CI_Model{
 	}
 
 	public function getAll(){
-		return $this->db->order_by("timestamp", "DESC")->get($this->table)->result();
-	}
-
-	public function getNotif(){
-		$this->db->where('status','unread');
-		return $this->db->order_by("timestamp", "DESC")->get($this->table)->result();
+		return $this->db->get($this->table)->result();
 	}
 
 	public function postAll($data){

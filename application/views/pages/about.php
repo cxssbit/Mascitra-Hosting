@@ -11,7 +11,7 @@
                 <div class="col-md-6">
                     <ul class="breadcrumb">
                         <li><span>You are here:</span></li>
-                        <li><a href="#">Home</a></li>
+                        <li><a href="<?=base_url()?>">Home</a></li>
                         <li class="active">About</li>
                     </ul>
                 </div>
@@ -100,12 +100,13 @@
             <!-- Section Title End -->
             
             <div class="row">
+                <?php foreach($team as $data){?>
                 <div class="col-md-3 col-sm-6">
                     <!-- Team Member Item Start -->
                     <div class="team-item">
                         <div class="team-img">
                             <!-- Team Member Image Start -->
-                            <img src="<?=base_url()?>assets/img/team-img/01.jpg" alt="" class="img-responsive">
+                            <img src="<?=base_url('assets/img/team-img/')?><?php if(empty($data->image)){echo '01.jpg';}else{echo $data->image;}?>" alt="" class="img-responsive">
                             <!-- Team Member Image End -->
                             
                             <!-- Team Member Social Links Start -->
@@ -114,7 +115,6 @@
                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                     <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                                 </ul>
                             </div>
                             <!-- Team Member Social Links End -->
@@ -122,103 +122,20 @@
                         
                         <!-- Team Member Info Start -->
                         <div class="team-info">
-                            <h2>Lorem Ipsum Sit</h2>
-                            <p>Web Designer</p>
+                            <h2><?=$data->name?></h2>
+                            <p><?=$data->position?></p>
+                            <div class="text-center">
+                        <?php $array=explode(',',$data->skill); for($i=0;$i<count($array);$i++){?>
+                            <span class="badge badge-primary"><?=$array[$i]?></span>
+                        <?php }?>
+                    </div>
+                            <small><?=$data->bio?></small>
                         </div>
                         <!-- Team Member Info End -->
                     </div>
                     <!-- Team Member Item End -->
                 </div>
-                
-                <div class="col-md-3 col-sm-6">
-                    <!-- Team Member Item Start -->
-                    <div class="team-item">
-                        <div class="team-img">
-                            <!-- Team Member Image Start -->
-                            <img src="<?=base_url()?>assets/img/team-img/02.jpg" alt="" class="img-responsive">
-                            <!-- Team Member Image End -->
-                            
-                            <!-- Team Member Social Links Start -->
-                            <div class="team-social-links">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                            <!-- Team Member Social Links End -->
-                        </div>
-                        
-                        <!-- Team Member Info Start -->
-                        <div class="team-info">
-                            <h2>Lorem Ipsum Sit</h2>
-                            <p>Web Developer</p>
-                        </div>
-                        <!-- Team Member Info End -->
-                    </div>
-                    <!-- Team Member Item End -->
-                </div>
-                
-                <div class="col-md-3 col-sm-6">
-                    <!-- Team Member Item Start -->
-                    <div class="team-item">
-                        <div class="team-img">
-                            <!-- Team Member Image Start -->
-                            <img src="<?=base_url()?>assets/img/team-img/03.jpg" alt="" class="img-responsive">
-                            <!-- Team Member Image End -->
-                            
-                            <!-- Team Member Social Links Start -->
-                            <div class="team-social-links">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                            <!-- Team Member Social Links End -->
-                        </div>
-                        
-                        <!-- Team Member Info Start -->
-                        <div class="team-info">
-                            <h2>Lorem Ipsum Sit</h2>
-                            <p>UI/UX Developer</p>
-                        </div>
-                        <!-- Team Member Info End -->
-                    </div>
-                    <!-- Team Member Item End -->
-                </div>
-                
-                <div class="col-md-3 col-sm-6">
-                    <!-- Team Member Item Start -->
-                    <div class="team-item">
-                        <div class="team-img">
-                            <!-- Team Member Image Start -->
-                            <img src="<?=base_url()?>assets/img/team-img/04.jpg" alt="" class="img-responsive">
-                            <!-- Team Member Image End -->
-                            
-                            <!-- Team Member Social Links Start -->
-                            <div class="team-social-links">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                            <!-- Team Member Social Links End -->
-                        </div>
-                        
-                        <!-- Team Member Info Start -->
-                        <div class="team-info">
-                            <h2>Lorem Ipsum Sit</h2>
-                            <p>Project Manager</p>
-                        </div>
-                        <!-- Team Member Info End -->
-                    </div>
-                    <!-- Team Member Item End -->
-                </div>
+                <?php }?>
             </div>
         </div>
     </div>

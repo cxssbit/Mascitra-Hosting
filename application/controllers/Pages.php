@@ -8,8 +8,10 @@ class Pages extends CI_Controller {
 	}
 
 	public function about(){
+		$this->load->model('TeamModel');
+		$data['team']=$this->TeamModel->getAll();
 		$this->load->view('layout/header');
-		$this->load->view('pages/about');
+		$this->load->view('pages/about',$data);
 		$this->load->view('layout/footer');
 	}
 

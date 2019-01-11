@@ -18,12 +18,7 @@
     <link rel="stylesheet" href="<?=base_url('assets/admin/css/cs-skin-elastic.css')?>">
     <link rel="stylesheet" href="<?=base_url('assets/admin/css/style.css')?>">
     <link rel="stylesheet" href="<?=base_url('assets/admin/css/lib/datatable/dataTables.bootstrap.min.css')?>">
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
-    <link href="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/jqvmap.min.css" rel="stylesheet">
-
-    <link href="https://cdn.jsdelivr.net/npm/weathericons@2.1.0/css/weather-icons.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="<?=base_url('assets/css/selectize.default.css')?>">
 
    <style>
     #weatherWidget .currentDesc {
@@ -72,17 +67,24 @@
                     <li class="<?php if($this->router->fetch_class()=='dashboard'){echo'active';}?>">
                         <a href="<?=base_url('dashboard')?>"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
                     </li>
+
+                    <li class="menu-title">Backend</li>
                     <li class="<?php if($this->router->fetch_class()=='article'){echo'active';}?>">
                         <a href="<?=base_url('article')?>"><i class="menu-icon fa fa-book"></i>Artikel </a>
                     </li>
                     <li class="<?php if($this->router->fetch_class()=='user'){echo'active';}?>">
                         <a href="<?=base_url('user')?>"><i class="menu-icon fa fa-user"></i>User </a>
                     </li>
-                    <li class="<?php if($this->router->fetch_class()=='contact'){echo'active';}?>">
-                        <a href="<?=base_url('contact/manager')?>"><i class="menu-icon fas fa-address-book"></i></i>Kontak </a>
-                    </li>
                     <li class="<?php if($this->router->fetch_class()=='message'){echo'active';}?>">
-                        <a href="<?=base_url('message')?>"><i class="menu-icon far fa-envelope"></i></i>Message </a>
+                        <a href="<?=base_url('message')?>"><i class="menu-icon far fa-envelope"></i>Message </a>
+                    </li>
+                    <li class="<?php if($this->router->fetch_class()=='team'){echo'active';}?>">
+                        <a href="<?=base_url('team')?>"><i class="menu-icon fas fa-users"></i>Team </a>
+                    </li>
+
+                    <li class="menu-title">Frontend</li>
+                    <li class="<?php if($this->router->fetch_class()=='contact'){echo'active';}?>">
+                        <a href="<?=base_url('contact/manager')?>"><i class="menu-icon fas fa-address-book"></i>Kontak </a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -110,68 +112,26 @@
                                 <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
                             </form>
                         </div>
-
-                        <div class="dropdown for-notification">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa fa-bell"></i>
-                                <span class="count bg-danger">3</span>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="notification">
-                                <p class="red">You have 3 Notification</p>
-                                <a class="dropdown-item media" href="#">
-                                    <i class="fa fa-check"></i>
-                                    <p>Server #1 overloaded.</p>
-                                </a>
-                                <a class="dropdown-item media" href="#">
-                                    <i class="fa fa-info"></i>
-                                    <p>Server #2 overloaded.</p>
-                                </a>
-                                <a class="dropdown-item media" href="#">
-                                    <i class="fa fa-warning"></i>
-                                    <p>Server #3 overloaded.</p>
-                                </a>
-                            </div>
-                        </div>
-
+                        <?php $notif=$this->AdminModel->Notif();?>
                         <div class="dropdown for-message">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="message" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa fa-envelope"></i>
-                                <span class="count bg-primary">4</span>
+                                <?php if($this->AdminModel->NotifRow()>0){?>
+                                <span class="count bg-primary"><?=$this->AdminModel->NotifRow()?></span>
+                                <?php }?>
                             </button>
                             <div class="dropdown-menu" aria-labelledby="message">
-                                <p class="red">You have 4 Mails</p>
-                                <a class="dropdown-item media" href="#">
-                                    <span class="photo media-left"><img alt="avatar" src="images/avatar/1.jpg"></span>
+                                <p class="red">You have <?=$this->AdminModel->NotifRow()?> Mails</p>
+                                <?php foreach($notif as $data){?>
+                                <a class="dropdown-item media" href="<?=base_url('message/view/'.$data->id)?>">
+                                    <span class="photo media-left"><i class="far fa-envelope"></i></span>
                                     <div class="message media-body">
-                                        <span class="name float-left">Jonathan Smith</span>
+                                        <span class="name float-left"><?=$data->name?></span>
                                         <span class="time float-right">Just now</span>
-                                        <p>Hello, this is an example msg</p>
+                                        <p><?=character_limiter($data->message,50)?></p>
                                     </div>
                                 </a>
-                                <a class="dropdown-item media" href="#">
-                                    <span class="photo media-left"><img alt="avatar" src="images/avatar/2.jpg"></span>
-                                    <div class="message media-body">
-                                        <span class="name float-left">Jack Sanders</span>
-                                        <span class="time float-right">5 minutes ago</span>
-                                        <p>Lorem ipsum dolor sit amet, consectetur</p>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item media" href="#">
-                                    <span class="photo media-left"><img alt="avatar" src="images/avatar/3.jpg"></span>
-                                    <div class="message media-body">
-                                        <span class="name float-left">Cheryl Wheeler</span>
-                                        <span class="time float-right">10 minutes ago</span>
-                                        <p>Hello, this is an example msg</p>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item media" href="#">
-                                    <span class="photo media-left"><img alt="avatar" src="images/avatar/4.jpg"></span>
-                                    <div class="message media-body">
-                                        <span class="name float-left">Rachel Santos</span>
-                                        <span class="time float-right">15 minutes ago</span>
-                                        <p>Lorem ipsum dolor sit amet, consectetur</p>
-                                    </div>
-                                </a>
+                                <?php }?>
                             </div>
                         </div>
                     </div>

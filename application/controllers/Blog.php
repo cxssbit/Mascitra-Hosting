@@ -8,7 +8,6 @@ class Blog extends CI_Controller {
 		$this->load->library('pagination');
 		$this->load->model('ArticleModel');
 		$this->load->model('KategoriModel');
-		$this->load->helper('text');
 	}
 
 	public function index()

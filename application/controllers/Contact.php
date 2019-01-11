@@ -5,11 +5,26 @@ class Contact extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
-		$this->form_validation->set_rules('contact','Kontak','required');
+		$this->load->model('MessageModel');
 	}
 
 	public function index()
 	{
+		$this->form_validation->set_rules('name',    'Nama',    'required|max_length[50]');
+		$this->form_validation->set_rules('email',   'E-Mail',  'required|max_length[100]|valid_email');
+		$this->form_validation->set_rules('subject', 'Subject', 'required|max_length[50]');
+		$this->form_validation->set_rules('message', 'Messagea','required|max_length[1000]');
+		$this->form_validation->set_error_delimiters('','');
+		if($this->form_validation->run()==true){
+			$data = array(
+				'name'    => strip_tags($this->input->post('name')),
+				'email'   => $this->input->post('email'),
+				'subject' => strip_tags($this->input->post('subject')),
+				'message' => strip_tags($this->input->post('message'))
+			);
+			$this->MessageModel->postAll($data);
+			redirect('contact');
+		}
 		$this->load->view('layout/header');
 		$this->load->view('contact');
 		$this->load->view('layout/footer');
@@ -18,7 +33,7 @@ class Contact extends CI_Controller {
 	public function manager()
 	{
 		$this->AuthModel->auth(1);
-		
+		$this->form_validation->set_rules('contact','Kontak','required');
 		if($this->form_validation->run()==true){
 			$this->ContactModel->update('address' ,array('detail'=>$this->input->post('contact')));
 			$this->ContactModel->update('email'   ,array('detail'=>$this->input->post('email')));
